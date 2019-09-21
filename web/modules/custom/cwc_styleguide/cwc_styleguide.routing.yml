@@ -1,0 +1,14 @@
+cwc_styleguide.news-listing:
+  path: '/styleguide/news-listing'
+  defaults:
+    _controller: '\Drupal\cwc_styleguide\Controller\StyleguideController::newsListing'
+    _title: 'CWC | News-listing'
+  requirements:
+    _permission: 'access content'
+cwc_styleguide.news-page:
+  path: '/styleguide/news-page'
+  defaults:
+    _controller: '\Drupal\cwc_styleguide\Controller\StyleguideController::individualNewsPage'
+    _title: 'CWC | News Page'
+  requirements:
+    _permission: 'access content'

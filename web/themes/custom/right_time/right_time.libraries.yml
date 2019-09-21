@@ -1,0 +1,48 @@
+global-styling:
+  version: 8.x
+  css:
+    theme:
+      build/css/bootstrap.css: {}
+      build/css/font-awesome.min.css: {}
+      build/css/rightTime.css: {}
+
+  js:
+    assets/js/ajax-popup-slider.js: {}
+    assets/js/bootstrap.js: {}
+    assets/js/bootstrap-hover-dropdown.js: {}
+    assets/js/classie.js: {}
+    assets/js/counter.js: {}
+    assets/js/hamburger-menu.js: {}
+    assets/js/html5shiv.js: {}
+    assets/js/imagesloaded.pkgd.min.js: {}
+    assets/js/jquery.appear.js: {}
+    assets/js/jquery.countTo.js: {}
+    assets/js/jquery.easing.1.3.js: {}
+    assets/js/jquery.easypiechart.js: {}
+    assets/js/jquery.fitvids.js: {}
+    assets/js/jquery.isotope.min.js: {}
+    assets/js/jquery.magnific-popup.min.js: {}
+    assets/js/jquery.parallax-1.1.3.js: {}
+    assets/js/jquery.revolution.js: {}
+    assets/js/jquery.tools.min.js: {}
+    assets/js/jquery.viewport.mini.js: {}
+    assets/js/main.js: {}
+    assets/js/owl.carousel.min.js: {}
+    assets/js/page-scroll.js: {}
+    assets/js/popup-gallery.js: {}
+    assets/js/skrollr.min.js: {}
+    assets/js/smooth-scroll.js: {}
+    assets/js/text-effect.js: {}
+    assets/js/velocity.min.js: {}
+    assets/js/velocity-animation.js: {}
+    assets/js/wow.min.js: {}
+  dependencies:
+    - core/modernizr
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/drupal.announce
+    - core/backbone
+    - core/matchmedia
+    - core/jquery.once
+    - core/drupal.displace

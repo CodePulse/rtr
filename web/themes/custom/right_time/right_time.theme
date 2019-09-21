@@ -1,0 +1,5 @@
+<?php
+
+function right_time_preprocess_paragraph(&$variables) {
+
+}

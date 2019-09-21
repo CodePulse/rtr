@@ -1,0 +1,6 @@
+name: CWC Styleguide module
+description: Custom styleguide for the CWC website to act as a sandbox for front end
+package: Custom
+
+type: module
+core: 8.x

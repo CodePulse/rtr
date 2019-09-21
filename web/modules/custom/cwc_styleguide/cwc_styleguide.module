@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @implements hook_theme()
+ */
+function cwc_styleguide_theme($existing, $type, $theme, $path) {
+  $variables = [];
+
+  return [
+    'news-listing' => [
+      'variables' => $variables,
+      'path' => drupal_get_path('module', 'cwc_styleguide') . '/templates',
+    ],
+    'news-page' => [
+      'variables' => $variables,
+      'path' => drupal_get_path('module', 'cwc_styleguide') . '/templates',
+    ],
+  ];
+}

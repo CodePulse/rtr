@@ -1,0 +1,16 @@
+name: Right Time Recruitment - Light theme
+type: theme
+description: 'Frontend theme for RTR.'
+package: Core
+core: 8.x
+libraries:
+  - right_time/global-styling
+regions:
+  header: 'Header'
+  navigation: 'Navigation'
+  breadcrumbs: 'Breadcrumbs'
+  content: 'Content'
+  footer: 'Footer'
+  copyright: 'Copyright'
+  callable_blocks: 'Callable blocks'
+
