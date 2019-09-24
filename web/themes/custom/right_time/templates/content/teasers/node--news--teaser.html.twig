@@ -1,0 +1,12 @@
+<div class="blog-post">
+  <div class="blog-post-images">
+    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+      <img src="{{ image_path }}" alt="">
+    </a>
+  </div>
+  <div class="post-details">
+    <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="post-title">{{ label }}</a>
+    <span class="post-author sm-margin-bottom-three sm-margin-top-three">Posted by {{ rtr_author_username }} | 10 January 2015</span>
+    <p class="width-90">{{ node.body.summary }}</p>
+  </div>
+</div>

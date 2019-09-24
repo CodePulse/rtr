@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_content
     - node.type.homepage
+    - paragraphs.paragraphs_type.stats
   module:
     - entity_reference_revisions
 id: node.homepage.field_content
@@ -20,10 +21,23 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    negate: 0
-    target_bundles: null
+    negate: 1
+    target_bundles:
+      stats: stats
     target_bundles_drag_drop:
       hero:
         weight: 2
+        enabled: false
+      cta_bar:
+        weight: 6
+        enabled: false
+      statistics:
+        weight: 8
+        enabled: false
+      stats:
+        enabled: true
+        weight: 9
+      title_text:
+        weight: 10
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,23 @@
+uuid: 446fa29e-d056-4b8e-b321-c8de95bf489d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.latest_news.field_heading
+    - paragraphs.paragraphs_type.latest_news
+id: paragraph.latest_news.default
+targetEntityType: paragraph
+bundle: latest_news
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

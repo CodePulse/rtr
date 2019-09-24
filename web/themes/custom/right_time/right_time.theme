@@ -43,22 +43,68 @@ function right_time_preprocess_paragraph(&$variables) {
       $e=3;
       break;
     case 'statistics':
+      if (!$paragraph->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($paragraph->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
+      }
+      if (!$paragraph->get('field_stats')->isEmpty()) {
+        $stats = $paragraph->get('field_stats')->referencedEntities();
+        $statistics = [];
+        /** @var \Drupal\paragraphs\Entity\Paragraph $stat */
+        foreach ($stats as $id => $stat) {
+          /** @var \Drupal\taxonomy\Entity\Term $icon */
+          $icon = $stat->get('field_icon')->first()->get('entity')->getTarget()->getValue();
+          $number = $stat->get('field_number')->getString();
+          $text = $stat->get('field_text')->getString();
+          $statistics[$id] = [
+            'icon' => $icon->label(),
+            'number' => $number,
+            'text' => $text,
+          ];
+        }
+        if (!empty($statistics)) {
+          $variables['statistics'] = $statistics;
+        }
+      }
+      break;
+    case 'latest_news':
+      $view = \Drupal\views\Views::getView('latest_news');
+      if (is_object($view)) {
+        $view->setDisplay('block');
+        $view->preExecute();
+        $view->execute();
+        $latest_news_block = $view->buildRenderable('block');
+        $variables['latest_news_block'] = $latest_news_block;
+      }
       break;
   }
 }
 
+
 /**
- * Implements template_preprocess_field().
+ * Implements template_preprocess_node().
  */
-function right_time_preprocess_field(&$variables) {
-  $field_name = $variables['field_name'];
-  $element = $variables['element'];
-  switch ($field_name) {
-    case 'field_primary_cta':
-    case 'field_secondary_cta':
-      $link_values = $element['#items']->getValue();
-      $variables['link_path'] = $link_values['uri'];
-      $variables['link_title'] = $link_values['title'];
+function right_time_preprocess_node(&$variables) {
+  /** @var \Drupal\node\Entity\Node $node */
+  $node = $variables['node'];
+  /** @var \Drupal\rtr_utilities\RTRUtilities $RTRUtilities */
+  $RTRUtilities = \Drupal::service('rtr_utilities.default');
+
+  switch($node->bundle()) {
+    case 'news':
+      if (!$node->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
+      }
+      /** @var \Drupal\user\Entity\User $author */
+      $author = $node->getOwner();
+      $variables['rtr_author_username'] = $author->getUsername();
+
       break;
   }
+  $e=0;
 }

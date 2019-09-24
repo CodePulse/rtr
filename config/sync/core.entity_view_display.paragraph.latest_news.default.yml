@@ -1,0 +1,21 @@
+uuid: 7949098b-1eb9-4f4a-8b66-1382b74194a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.latest_news.field_heading
+    - paragraphs.paragraphs_type.latest_news
+id: paragraph.latest_news.default
+targetEntityType: paragraph
+bundle: latest_news
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
