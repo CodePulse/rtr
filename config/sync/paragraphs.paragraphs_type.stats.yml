@@ -1,0 +1,9 @@
+uuid: dde067ee-c791-47a6-b872-db81f8f0da7b
+langcode: en
+status: true
+dependencies: {  }
+id: stats
+label: Stats
+icon_uuid: null
+description: 'Referenced by the "Statistics" paragraph.'
+behavior_plugins: {  }

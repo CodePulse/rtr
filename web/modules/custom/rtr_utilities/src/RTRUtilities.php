@@ -2,6 +2,8 @@
 
 namespace Drupal\rtr_utilities;
 
+use Drupal\Core\Url;
+
 /**
  * Class RTRUtilities.
  *
@@ -51,5 +53,31 @@ class RTRUtilities {
       return $image_path;
     }
     return '';
+  }
+
+
+  /**
+   * Helper function to obtain text and path for link field.
+   * @param $link_field
+   *
+   * @return array
+   */
+  public function getLinkFieldURL($link_field) {
+    $link_values = $link_field->first()->getValue();
+    $partial_uri = substr($link_values['uri'], 0, 12);
+    if ($partial_uri === "entity:node/") {
+      // This is an internal URL. Link will be generated differently.
+      $node_url = Url::fromUri($link_values['uri']);
+      $link_path = $node_url->toString();
+    }
+    else {
+      $link_path = $link_values['uri'];
+    }
+    $link_title = $link_values['title'];
+
+    return [
+      'link_path' => $link_path,
+      'link_title' => $link_title,
+    ];
   }
 }

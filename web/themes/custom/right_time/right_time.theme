@@ -27,8 +27,38 @@ function right_time_preprocess_paragraph(&$variables) {
         $variables['sub_text'] = $paragraph->get('field_sub_text')->getString();
       }
       break;
+    case 'cta_bar':
+      if (!$paragraph->get('field_primary_cta')->isEmpty()) {
+        $field_primary_cta = $RTRUtilities->getLinkFieldURL($paragraph->get('field_primary_cta'));
+        if (!empty($field_primary_cta)) {
+          $variables['field_primary_cta'] = $field_primary_cta;
+        }
+      }
+      if (!$paragraph->get('field_secondary_cta')->isEmpty()) {
+        $field_secondary_cta = $RTRUtilities->getLinkFieldURL($paragraph->get('field_secondary_cta'));
+        if (!empty($field_secondary_cta)) {
+          $variables['field_secondary_cta'] = $field_secondary_cta;
+        }
+      }
+      $e=3;
+      break;
+    case 'statistics':
+      break;
   }
+}
 
-
-
+/**
+ * Implements template_preprocess_field().
+ */
+function right_time_preprocess_field(&$variables) {
+  $field_name = $variables['field_name'];
+  $element = $variables['element'];
+  switch ($field_name) {
+    case 'field_primary_cta':
+    case 'field_secondary_cta':
+      $link_values = $element['#items']->getValue();
+      $variables['link_path'] = $link_values['uri'];
+      $variables['link_title'] = $link_values['title'];
+      break;
+  }
 }

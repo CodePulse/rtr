@@ -1,0 +1,43 @@
+uuid: 220f4363-5c30-4a44-ada3-890b2e92b9e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_stats
+    - paragraphs.paragraphs_type.statistics
+    - paragraphs.paragraphs_type.stats
+  module:
+    - entity_reference_revisions
+id: paragraph.statistics.field_stats
+field_name: field_stats
+entity_type: paragraph
+bundle: statistics
+label: Stats
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      stats: stats
+    target_bundles_drag_drop:
+      cta_bar:
+        weight: 6
+        enabled: false
+      hero:
+        weight: 7
+        enabled: false
+      statistics:
+        weight: 8
+        enabled: false
+      stats:
+        enabled: true
+        weight: 9
+      title_text:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions
