@@ -1,0 +1,29 @@
+<!-- background video section -->
+<section class="no-padding full-screen cover-background"
+         style="background-image:url('{{ image_path }}');">
+  <div class="video-background  fit-videos">
+    <div class="container full-screen position-relative">
+      <div class="slider-typography">
+        <div class="slider-text-middle-main">
+          <div class="slider-text-bottom slider-text-middle3">
+            <h1 class="cd-headline letters type xs-margin-bottom-thirtyfive">
+              <span class="rotation-highlight">{{ content.field_heading }}</span><br>
+              <span class="cd-words-wrapper waiting">
+                                        <b class="is-visible">{{ sub_text }}</b>
+                                    </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-down"><a href="#features" class="inner-link"><i class="fa fa-angle-down"></i></a></div>
+  </div>
+  <div class="video-wrapper full-screen-width z-index-0">
+    <!-- video -->
+    <video autoplay muted loop class="html-video" preload="auto" poster="{{ image_path }}">
+      <source type="video/mp4" src="{{ video_path }}">
+    </video>
+    <!-- end video -->
+  </div>
+</section>
+<!-- end background video section -->

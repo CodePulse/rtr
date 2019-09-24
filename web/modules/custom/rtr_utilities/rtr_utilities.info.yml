@@ -1,0 +1,5 @@
+name: RTR - Utilities.
+type: module
+description: RTR utilities -  To execute short snippet code.
+core: 8.x
+package: custom

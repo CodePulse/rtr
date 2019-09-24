@@ -1,5 +1,34 @@
 <?php
 
+/**
+ * Implements template_preprocess_hook().
+ */
 function right_time_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = &$variables['elements']['#paragraph'];
+  /** @var \Drupal\rtr_utilities\RTRUtilities $RTRUtilities */
+  $RTRUtilities = \Drupal::service('rtr_utilities.default');
+
+  switch ($paragraph->bundle()) {
+    case 'hero':
+      if (!$paragraph->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($paragraph->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
+      }
+      if (!$paragraph->get('field_video')->isEmpty()) {
+        $video_path = $RTRUtilities->getMediaVideo($paragraph->get('field_video'));
+        if (!empty($video_path)) {
+          $variables['video_path'] = $video_path;
+        }
+      }
+      if (!$paragraph->get('field_sub_text')->isEmpty()) {
+        $variables['sub_text'] = $paragraph->get('field_sub_text')->getString();
+      }
+      break;
+  }
+
+
 
 }

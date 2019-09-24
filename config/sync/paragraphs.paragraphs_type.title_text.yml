@@ -1,0 +1,9 @@
+uuid: f0290245-21aa-4417-af22-5317d1c9829e
+langcode: en
+status: true
+dependencies: {  }
+id: title_text
+label: 'Title & Text'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

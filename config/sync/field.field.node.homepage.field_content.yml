@@ -1,0 +1,29 @@
+uuid: 73d1368e-27a5-4c2d-9cca-2c4e1a0e8b71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.homepage
+  module:
+    - entity_reference_revisions
+id: node.homepage.field_content
+field_name: field_content
+entity_type: node
+bundle: homepage
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      hero:
+        weight: 2
+        enabled: false
+field_type: entity_reference_revisions

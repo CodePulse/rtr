@@ -3,21 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.homepage.body
+    - field.field.node.homepage.field_content
     - node.type.homepage
   module:
-    - text
+    - entity_reference_revisions
     - user
 id: node.homepage.default
 targetEntityType: node
 bundle: homepage
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
-    settings: {  }
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   links:
