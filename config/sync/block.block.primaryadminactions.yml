@@ -7,7 +7,7 @@ dependencies:
 id: primaryadminactions
 theme: right_time
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: local_actions_block
 settings:

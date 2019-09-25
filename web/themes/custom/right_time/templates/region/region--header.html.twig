@@ -1,0 +1,42 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region <div>.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @see template_preprocess_region()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<nav class="navbar navbar-default navbar-fixed-top nav-transparent overlay-nav sticky-nav nav-border-bottom nav-white" role="navigation">
+  <div class="container">
+    <div class="row">
+      <!-- logo -->
+      <div class="col-md-2 pull-left">
+        <a class="logo-light" href="/">
+          <img alt="" src="/themes/custom/right_time/assets/images/r-logo-white.png" class="logo" />
+        </a>
+        <a class="logo-dark" href="/">
+          <img alt="" src="/themes/custom/right_time/assets/images/r-logo-color.png" class="logo" />
+        </a>
+      </div>
+      <!-- end logo -->
+      <!-- toggle navigation -->
+      <div class="navbar-header col-sm-8 col-xs-2 pull-right">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      </div>
+      <!-- toggle navigation end -->
+      <!-- main menu -->
+      {{ elements.mainnavigation }}
+      <!-- end main menu -->
+    </div>
+  </div>
+</nav>
+

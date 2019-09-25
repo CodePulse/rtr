@@ -1,0 +1,67 @@
+uuid: 3416f97b-79ab-405e-9f71-d9271d6d9cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.job.body
+    - field.field.node.job.field_contract_type
+    - field.field.node.job.field_location
+    - field.field.node.job.field_salary
+    - field.field.node.job.field_start_date
+    - node.type.job
+  module:
+    - address
+    - datetime
+    - text
+    - user
+id: node.job.default
+targetEntityType: node
+bundle: job
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_contract_type:
+    weight: 102
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_location:
+    weight: 105
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_salary:
+    weight: 104
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_start_date:
+    weight: 103
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,18 @@
+uuid: ab51938a-79cc-40f0-98bb-004c3ed7a269
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Job
+type: job
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

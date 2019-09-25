@@ -1,0 +1,9 @@
+.toolbar-horizontal {
+  .sticky-nav {
+    top: 90px !important;
+  }
+  .navbar-fixed-top,
+  .navbar-fixed-bottom {
+    z-index: 100 !important;
+  }
+}

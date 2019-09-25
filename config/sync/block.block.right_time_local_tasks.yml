@@ -9,7 +9,7 @@ _core:
 id: right_time_local_tasks
 theme: right_time
 region: content
-weight: -40
+weight: -2
 provider: null
 plugin: local_tasks_block
 settings:

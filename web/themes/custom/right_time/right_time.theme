@@ -103,8 +103,8 @@ function right_time_preprocess_node(&$variables) {
       /** @var \Drupal\user\Entity\User $author */
       $author = $node->getOwner();
       $variables['rtr_author_username'] = $author->getUsername();
-
+      $raw_body = $node->get('body')->first()->getValue();
+      $variables['raw_body'] = strip_tags($raw_body['value'], 'a');
       break;
   }
-  $e=0;
 }

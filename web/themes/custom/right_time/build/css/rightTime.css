@@ -11524,6 +11524,14 @@ html, body {
     clear: none;
   }
 }
+.toolbar-horizontal .sticky-nav {
+  top: 90px !important;
+}
+.toolbar-horizontal .navbar-fixed-top,
+.toolbar-horizontal .navbar-fixed-bottom {
+  z-index: 100 !important;
+}
+
 /*-----------------------------------------------------------------------------
 
         -	Revolution Slider 4.1 Captions -

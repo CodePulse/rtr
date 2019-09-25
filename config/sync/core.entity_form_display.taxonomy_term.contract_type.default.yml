@@ -1,0 +1,22 @@
+uuid: 1ea48822-9be5-4247-9531-6869a270150a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.contract_type
+id: taxonomy_term.contract_type.default
+targetEntityType: taxonomy_term
+bundle: contract_type
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

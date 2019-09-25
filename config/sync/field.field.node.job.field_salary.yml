@@ -1,0 +1,23 @@
+uuid: c549277a-576b-47d8-a5c7-24c01073ada8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_salary
+    - node.type.job
+id: node.job.field_salary
+field_name: field_salary
+entity_type: node
+bundle: job
+label: Salary
+description: 'Ideally, add the maximum salary.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: £
+  suffix: ''
+field_type: integer
