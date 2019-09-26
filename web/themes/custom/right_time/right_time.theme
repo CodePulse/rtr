@@ -120,7 +120,7 @@ function right_time_preprocess_node(&$variables) {
           $variables['image_path'] = $image_path;
         }
       }
-      $service_nodes = $RTRUtilities->loadAllServices();
+      $variables['service_nodes'] = $RTRUtilities->loadAllServices();
       break;
 
   }

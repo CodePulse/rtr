@@ -86,13 +86,28 @@ class RTRUtilities {
     ];
   }
 
+  /**
+   * Helper function to get list of service nodes.
+   *
+   * @return array
+   * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+   * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+   * @throws \Drupal\Core\Entity\EntityMalformedException
+   */
   public function loadAllServices() {
     $properties = [
       'type' => 'service',
     ];
-    $nodes = \Drupal::entityTypeManager()
+    $serviceNodes = \Drupal::entityTypeManager()
       ->getStorage('node')
       ->loadByProperties($properties);
-
+    $processedServiceNodes = [];
+    if (!empty($serviceNodes)) {
+      foreach ($serviceNodes as $nid => $node) {
+        $processedServiceNodes[$nid]['title'] = $node->label();
+        $processedServiceNodes[$nid]['link'] = $node->toUrl()->toString();
+      }
+    }
+    return $processedServiceNodes;
   }
 }

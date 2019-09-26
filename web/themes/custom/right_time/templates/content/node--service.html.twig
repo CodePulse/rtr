@@ -40,12 +40,9 @@
           <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
           <div class="widget-body">
             <ul class="category-list">
-              <li><a href="services.html">Web Development</a></li>
-              <li><a href="services.html">Logo and Identity</a></li>
-              <li><a href="services.html">Graphic Design</a></li>
-              <li><a href="services.html">App Development</a></li>
-              <li><a href="services.html">Social Marketing</a></li>
-              <li><a href="services.html">Content Creation</a></li>
+              {% for service in service_nodes %}
+                <li><a href="{{ service.link }}">{{ service.title }}</a></li>
+              {% endfor %}
             </ul>
           </div>
         </div>
@@ -81,31 +78,6 @@
                 </div>
               </li>
             </ul>
-          </div>
-        </div>
-        <!-- end widget  -->
-        <!-- widget  -->
-        <div class="widget">
-          <h5 class="widget-title font-alt">Happy Client Say's</h5>
-          <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
-          <div class="widget-body clearfix">
-            <div class="testimonial-style2">
-              <p class="no-margin-top">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                galley.</p>
-              <span class="name black-text">Adario Strange - Apple</span>
-              <i class="fa fa-quote-left small-icon yellow-text display-block margin-five no-margin-bottom"></i>
-            </div>
-          </div>
-        </div>
-        <!-- end widget  -->
-        <!-- widget  -->
-        <div class="widget no-margin-bottom">
-          <h5 class="widget-title font-alt">Text Widget</h5>
-          <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
-          <div class="widget-body">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s.</p>
           </div>
         </div>
         <!-- end widget  -->
