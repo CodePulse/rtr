@@ -1,0 +1,10 @@
+uuid: 0881d485-ab7a-4277-bd45-eafc332e38f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.title_block
+label: 'Title block'
+targetEntityType: node
+cache: true

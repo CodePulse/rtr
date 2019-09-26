@@ -1,17 +1,18 @@
-uuid: d86832e0-b55f-4052-ac27-1dea83cfd54a
+uuid: c9db433c-afdf-465b-b853-18ba2a83e8bc
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.title_block
     - field.field.node.service.body
     - node.type.service
   module:
     - text
     - user
-id: node.service.default
+id: node.service.title_block
 targetEntityType: node
 bundle: service
-mode: default
+mode: title_block
 content:
   body:
     label: hidden
@@ -22,7 +23,7 @@ content:
     region: content
   links:
     weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
