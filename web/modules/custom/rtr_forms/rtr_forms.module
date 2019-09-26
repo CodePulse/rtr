@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_form_alter().  
+ */
+function rtr_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if (isset($form['#webform_id']) && $form['#webform_id'] == 'services') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $form['elements']['service']['#value'] = $node->id();
+    }
+  }
+}

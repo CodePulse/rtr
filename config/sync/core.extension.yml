@@ -37,6 +37,7 @@ module:
   path: 0
   quickedit: 0
   rdf: 0
+  rtr_forms: 0
   rtr_utilities: 0
   search: 0
   shortcut: 0

@@ -103,13 +103,24 @@ function right_time_preprocess_node(&$variables) {
       /** @var \Drupal\user\Entity\User $author */
       $author = $node->getOwner();
       $variables['rtr_author_username'] = $author->getUsername();
-      $raw_body = $node->get('body')->first()->getValue();
-      $variables['raw_body'] = strip_tags($raw_body['value']);
+      if (!$node->get('body')->isEmpty()) {
+        $raw_body = $node->get('body')->first()->getValue();
+        $variables['raw_body'] = strip_tags($raw_body['value']);
+      }
       break;
     case 'service':
       $variables['raw_title'] = $node->label();
-      $raw_body = $node->get('body')->first()->getValue();
-      $variables['raw_body'] = strip_tags($raw_body['value']);
+      if (!$node->get('body')->isEmpty()) {
+        $raw_body = $node->get('body')->first()->getValue();
+        $variables['raw_body'] = $raw_body['value'];
+      }
+      if (!$node->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
+      }
+      $service_nodes = $RTRUtilities->loadAllServices();
       break;
 
   }

@@ -22,8 +22,10 @@ class RTRUtilities {
       ->get('entity')
       ->getTarget()
       ->getValue();
-    if ($image_media_entity->hasField('field_media_image') && !$image_media_entity->get('field_media_image')->isEmpty()) {
-      $image_file_entity = $image_media_entity->get('field_media_image')->first()
+    if ($image_media_entity->hasField('field_media_image') && !$image_media_entity->get('field_media_image')
+        ->isEmpty()) {
+      $image_file_entity = $image_media_entity->get('field_media_image')
+        ->first()
         ->get('entity')
         ->getTarget()
         ->getValue();
@@ -44,8 +46,10 @@ class RTRUtilities {
       ->get('entity')
       ->getTarget()
       ->getValue();
-    if ($video_media_entity->hasField('field_media_video_file') && !$video_media_entity->get('field_media_video_file')->isEmpty()) {
-      $videlo_file_entity = $video_media_entity->get('field_media_video_file')->first()
+    if ($video_media_entity->hasField('field_media_video_file') && !$video_media_entity->get('field_media_video_file')
+        ->isEmpty()) {
+      $videlo_file_entity = $video_media_entity->get('field_media_video_file')
+        ->first()
         ->get('entity')
         ->getTarget()
         ->getValue();
@@ -58,6 +62,7 @@ class RTRUtilities {
 
   /**
    * Helper function to obtain text and path for link field.
+   *
    * @param $link_field
    *
    * @return array
@@ -79,5 +84,15 @@ class RTRUtilities {
       'link_path' => $link_path,
       'link_title' => $link_title,
     ];
+  }
+
+  public function loadAllServices() {
+    $properties = [
+      'type' => 'service',
+    ];
+    $nodes = \Drupal::entityTypeManager()
+      ->getStorage('node')
+      ->loadByProperties($properties);
+
   }
 }
