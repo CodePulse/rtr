@@ -1,0 +1,58 @@
+uuid: 27920a66-7fb3-4377-833e-5e167d972446
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.service
+    - paragraphs.paragraphs_type.cta_bar
+    - paragraphs.paragraphs_type.form
+    - paragraphs.paragraphs_type.latest_news
+    - paragraphs.paragraphs_type.statistics
+  module:
+    - entity_reference_revisions
+id: node.service.field_content
+field_name: field_content
+entity_type: node
+bundle: service
+label: Content
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_bar: cta_bar
+      form: form
+      latest_news: latest_news
+      statistics: statistics
+    target_bundles_drag_drop:
+      cta_bar:
+        enabled: true
+        weight: 9
+      form:
+        enabled: true
+        weight: 10
+      hero:
+        weight: 11
+        enabled: false
+      latest_news:
+        enabled: true
+        weight: 12
+      services:
+        weight: 13
+        enabled: false
+      statistics:
+        enabled: true
+        weight: 14
+      stats:
+        weight: 15
+        enabled: false
+      title_text:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

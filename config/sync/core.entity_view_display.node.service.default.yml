@@ -4,8 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.node.service.body
+    - field.field.node.service.field_content
     - node.type.service
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.service.default
@@ -19,6 +21,15 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_content:
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 100
