@@ -7,10 +7,10 @@
       <div class="col-md-12 col-sm-12 text-center animated fadeInUp">
         <div class="separator-line bg-yellow no-margin-top margin-four"></div>
         <!-- page title -->
-        <h1 class="white-text">Page - Right Sidebar</h1>
+        <h1 class="white-text">{{ raw_title }}</h1>
         <!-- end page title -->
         <!-- page title tagline -->
-        <span class="white-text">Lorem Ipsum is simply dummy text of the printing.</span>
+        <span class="white-text">We believe in you.</span>
         <!-- end title tagline -->
       </div>
     </div>
@@ -26,10 +26,8 @@
       <div class="col-md-8 col-sm-8">
         <div class="clearfix">
           <div class="col-md-12 col-sm-12 no-padding">
-            <p class="text-large text-black margin-five no-margin-top">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-            <div class="wide-separator-line no-margin-lr"></div>
-            <p class="text-med margin-five no-margin-top">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-            <img src="http://placehold.it/1200x800" alt=""/>
+            <p class="text-med margin-five no-margin-top">{{ raw_body }}</p>
+            {{ content.field_content }}
           </div>
         </div>
         <div class="clearfix margin-five no-margin-bottom sm-margin-top-seven">

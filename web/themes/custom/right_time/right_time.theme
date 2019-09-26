@@ -104,7 +104,13 @@ function right_time_preprocess_node(&$variables) {
       $author = $node->getOwner();
       $variables['rtr_author_username'] = $author->getUsername();
       $raw_body = $node->get('body')->first()->getValue();
-      $variables['raw_body'] = strip_tags($raw_body['value'], 'a');
+      $variables['raw_body'] = strip_tags($raw_body['value']);
       break;
+    case 'service':
+      $variables['raw_title'] = $node->label();
+      $raw_body = $node->get('body')->first()->getValue();
+      $variables['raw_body'] = strip_tags($raw_body['value']);
+      break;
+
   }
 }
