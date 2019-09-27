@@ -1,0 +1,23 @@
+uuid: 058b1094-d782-4d5e-ba95-1e29472370e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.latest_jobs.field_heading
+    - paragraphs.paragraphs_type.latest_jobs
+id: paragraph.latest_jobs.default
+targetEntityType: paragraph
+bundle: latest_jobs
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

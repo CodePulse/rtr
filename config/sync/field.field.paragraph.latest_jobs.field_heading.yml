@@ -1,0 +1,19 @@
+uuid: 09a4e3bf-703a-4637-a7a0-1140a137053d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.latest_jobs
+id: paragraph.latest_jobs.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: latest_jobs
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

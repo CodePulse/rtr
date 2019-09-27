@@ -79,6 +79,16 @@ function right_time_preprocess_paragraph(&$variables) {
         $variables['latest_news_block'] = $latest_news_block;
       }
       break;
+    case 'latest_jobs':
+      $view = \Drupal\views\Views::getView('jobs');
+      if (is_object($view)) {
+        $view->setDisplay('block');
+        $view->preExecute();
+        $view->execute();
+        $latest_news_block = $view->buildRenderable('block');
+        $variables['latest_jobs_block'] = $latest_news_block;
+      }
+      break;
   }
 }
 
@@ -121,6 +131,16 @@ function right_time_preprocess_node(&$variables) {
         }
       }
       $variables['service_nodes'] = $RTRUtilities->loadAllServices();
+      break;
+    case 'job':
+      //salary
+      $salary = $node->get('field_salary')->first()->getString();
+      $address = $node->get('field_location')->first()->getValue();
+      $contract_type = $node->get('field_contract_type')->first()->get('entity')->getTarget()->getValue();
+
+      $job_meta = $address['locality'] . ' | ' . $contract_type->label() . ' | £' . number_format($salary);
+      $variables['job_meta'] = $job_meta;
+      $E=4;
       break;
 
   }

@@ -1,0 +1,6 @@
+<div class="text-block-inner">
+  <div class="text-large text-uppercase no-margin-bottom">{{ job_meta }}</div>
+  <p class="title-small text-uppercase font-weight-600 black-text letter-spacing-1">{{ label }}</p>
+  <p class="text-med padding-left-right">{{ node.body.summary }}</p>
+  <a class="highlight-button btn btn-small no-margin" href="{{ path('entity.node.canonical', {'node': node.id}) }}">Apply</a>
+</div>

@@ -1,0 +1,21 @@
+uuid: b3808cd4-48da-4976-83df-8b02f61ef2f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.latest_jobs.field_heading
+    - paragraphs.paragraphs_type.latest_jobs
+id: paragraph.latest_jobs.default
+targetEntityType: paragraph
+bundle: latest_jobs
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: e2a97298-c532-41d0-bf8c-f78c3ed2d4e6
+langcode: en
+status: true
+dependencies: {  }
+id: latest_jobs
+label: 'Latest jobs'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
