@@ -1,0 +1,98 @@
+{#
+/**
+ * @file
+ * Theme override for a main view template.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ * - css_name: A css-safe version of the view name.
+ * - css_class: The user-specified classes names, if any.
+ * - header: The optional header.
+ * - footer: The optional footer.
+ * - rows: The results of the view query, if any.
+ * - empty: The content to display if there are no rows.
+ * - pager: The optional pager next/prev links to display.
+ * - exposed: Exposed widget form/info to display.
+ * - feed_icons: Optional feed icons to display.
+ * - more: An optional link to the next page of results.
+ * - title: Title of the view, only used when displaying in the admin preview.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the view title.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the view title.
+ * - attachment_before: An optional attachment view to be displayed before the
+ *   view content.
+ * - attachment_after: An optional attachment view to be displayed after the
+ *   view content.
+ * - dom_id: Unique id for every view being printed to give unique class for
+ *   Javascript.
+ *
+ * @see template_preprocess_views_view()
+ */
+#}
+{%
+  set classes = [
+  'view',
+  'view-' ~ id|clean_class,
+  'view-id-' ~ id,
+  'view-display-id-' ~ display_id,
+  dom_id ? 'js-view-dom-id-' ~ dom_id,
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+
+<!-- head section -->
+<section class="page-title parallax3 parallax-fix page-title-large">
+  <div class="opacity-medium bg-black"></div>
+  <img class="parallax-background-img" src="/themes/custom/right_time/assets/images/headers/job-listing-5.jpg" alt="" />
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 text-center animated fadeInUp">
+        <div class="separator-line bg-yellow no-margin-top margin-four"></div>
+        <!-- page title -->
+        <h1 class="white-text">Latest jobs</h1>
+        <!-- end page title -->
+        <!-- page title tagline -->
+        <span class="white-text">Jobs across the UK and U.S.</span>
+        <!-- end title tagline -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end head section -->
+
+<!-- content section -->
+<section class="wow fadeIn">
+  <div class="container">
+    <div class="row">
+      <!-- sidebar  -->
+      <div class="col-md-3 col-sm-4 sidebar">
+        {% if exposed %}
+          <div class="view-filters">
+            {{ exposed }}
+          </div>
+        {% endif %}
+      </div>
+      <!-- end sidebar  -->
+      <!-- content  -->
+      <div class="col-md-8 col-sm-8 col-md-offset-1 xs-margin-top-seven">
+        {% if rows %}
+          <div class="view-content">
+            {{ rows }}
+          </div>
+        {% elseif empty %}
+          <div class="view-empty">
+            {{ empty }}
+          </div>
+        {% endif %}
+        {% if pager %}
+          {{ pager }}
+        {% endif %}
+      </div>
+      <!-- end content  -->
+    </div>
+  </div>
+</section>
+<!-- end content section -->
+
+</div>
