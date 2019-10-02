@@ -140,7 +140,6 @@ function right_time_preprocess_node(&$variables) {
 
       $job_meta = $address['locality'] . ' | ' . $contract_type->label() . ' | £' . number_format($salary);
       $variables['job_meta'] = $job_meta;
-      $E=4;
       break;
 
   }

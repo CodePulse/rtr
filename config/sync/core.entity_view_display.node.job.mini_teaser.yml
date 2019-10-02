@@ -1,8 +1,9 @@
-uuid: 3416f97b-79ab-405e-9f71-d9271d6d9cef
+uuid: b06d9f08-43db-4666-a4d8-7d01dde737d0
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.mini_teaser
     - field.field.node.job.body
     - field.field.node.job.field_contract_type
     - field.field.node.job.field_location
@@ -15,10 +16,10 @@ dependencies:
     - datetime
     - text
     - user
-id: node.job.default
+id: node.job.mini_teaser
 targetEntityType: node
 bundle: job
-mode: default
+mode: mini_teaser
 content:
   body:
     label: hidden

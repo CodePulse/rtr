@@ -1,0 +1,67 @@
+<!-- head section -->
+<section class="content-top-margin page-title bg-black">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-7 col-sm-12 wow fadeInUp" data-wow-duration="300ms">
+        <!-- page title -->
+        <h1 class="white-text">{{ node.title() }}</h1>
+        <!-- end page title -->
+        <!-- page title tagline -->
+        <span class="white-text xs-display-none">{{ job_meta }}</span>
+        <!-- end title tagline -->
+        <div class="separator-line margin-three bg-white no-margin-lr sm-margin-top-three sm-margin-bottom-three no-margin-bottom xs-display-none"></div>
+      </div>
+      <div class="col-lg-4 col-md-5 col-sm-12 breadcrumb text-uppercase sm-no-margin-top wow fadeInUp xs-display-none" data-wow-duration="600ms">
+        <!-- breadcrumb -->
+        <ul>
+          <li><a href="/" class="white-text">Home</a></li>
+          <li class="white-text"><a href="{{ url('view.jobs.page') }}" class="white-text">Jobs</a></li>
+          <li class="white-text">{{ node.title() }}</li>
+        </ul>
+        <!-- end breadcrumb -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end head section -->
+
+
+<section class="wow fadeIn">
+  <div class="container">
+    <div class="row">
+      <!-- content  -->
+      <div class="col-md-8 col-sm-8">
+        {{ content }}
+      </div>      <!-- end content  -->
+      <!-- sidebar  -->
+      <div class="col-md-3 col-sm-4 sidebar col-md-offset-1 xs-margin-top-seven">
+        <!-- widget  -->
+        <div class="widget">
+          <h5 class="widget-title font-alt">Job information</h5>
+          <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
+          <div class="widget-body">
+            <ul class="category-list">
+              <li><strong>Salary:</strong> {{ content.field_salary }}</li>
+              <li><strong>Contract type:</strong> {{ content.field_contract_type }}</li>
+              <li><strong>Location:</strong> {{ content.field_location }}</li>
+            </ul>
+          </div>
+        </div>
+        <!-- end widget  -->
+        <!-- widget  -->
+        <div class="widget">
+          <h5 class="widget-title font-alt">Similar jobs</h5>
+          <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
+          <div class="widget-body">
+            <ul class="widget-posts">
+              {{ content.field_similar_jobs }}
+            </ul>
+          </div>
+        </div>
+        <!-- end widget  -->
+      </div>
+      <!-- end sidebar  -->
+    </div>
+  </div>
+</section>
+
