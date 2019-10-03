@@ -10,7 +10,7 @@
         <h1 class="white-text">{{ raw_title }}</h1>
         <!-- end page title -->
         <!-- page title tagline -->
-        <span class="white-text">We believe in you.</span>
+        <span class="white-text">Some text can go here.</span>
         <!-- end title tagline -->
       </div>
     </div>
@@ -29,6 +29,11 @@
             <div class="text-med margin-five no-margin-top">{{ content.body }}</div>
             {{ content.field_content }}
           </div>
+          <div class="col-md-12 text-center">
+            <h3>{{ 'Related jobs' }}</h3>
+            <div class="separator-line bg-yellow margin-five"></div>
+            {{ content.field_related_jobs }}
+          </div>
         </div>
       </div>
       <!-- end content  -->
@@ -43,40 +48,6 @@
               {% for service in service_nodes %}
                 <li><a href="{{ service.link }}">{{ service.title }}</a></li>
               {% endfor %}
-            </ul>
-          </div>
-        </div>
-        <!-- end widget  -->
-        <!-- widget  -->
-        <div class="widget">
-          <h5 class="widget-title font-alt">Popular posts</h5>
-          <div class="thin-separator-line bg-dark-gray no-margin-lr"></div>
-          <div class="widget-body">
-            <ul class="widget-posts">
-              <li class="clearfix">
-                <a href="blog-single-left-sidebar.html"><img src="http://placehold.it/480x358" alt=""/></a>
-                <div class="widget-posts-details"><a href="blog-single-left-sidebar.html">Elements of a Launch Page</a>
-                  Simon Schmid - 02 January
-                </div>
-              </li>
-              <li class="clearfix">
-                <a href="blog-single-left-sidebar.html"><img src="http://placehold.it/480x358" alt=""/></a>
-                <div class="widget-posts-details"><a href="blog-single-left-sidebar.html">The Art of Design
-                    Etiquette</a> Paul Scrivens - 06 January
-                </div>
-              </li>
-              <li class="clearfix">
-                <a href="blog-single-left-sidebar.html"><img src="http://placehold.it/480x358" alt=""/></a>
-                <div class="widget-posts-details"><a href="blog-single-left-sidebar.html">Easier is Better</a> Paul Boag
-                  - 08 January
-                </div>
-              </li>
-              <li class="clearfix">
-                <a href="blog-single-left-sidebar.html"><img src="http://placehold.it/480x358" alt=""/></a>
-                <div class="widget-posts-details"><a href="blog-single-left-sidebar.html">Successful Websites</a> Simon
-                  Schmid - 16 January
-                </div>
-              </li>
             </ul>
           </div>
         </div>

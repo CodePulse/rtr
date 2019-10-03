@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.service.body
     - field.field.node.service.field_content
     - field.field.node.service.field_image
+    - field.field.node.service.field_related_jobs
     - node.type.service
   module:
     - media_library
@@ -57,6 +58,15 @@ content:
       media_types: {  }
     third_party_settings: {  }
     type: media_library_widget
+    region: content
+  field_related_jobs:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   path:
     type: path

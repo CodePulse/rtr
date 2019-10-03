@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.service.body
     - field.field.node.service.field_content
     - field.field.node.service.field_image
+    - field.field.node.service.field_related_jobs
     - node.type.service
   module:
     - entity_reference_revisions
@@ -34,11 +35,20 @@ content:
     region: content
   field_image:
     weight: 103
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
+  field_related_jobs:
+    weight: 104
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   links:
     weight: 100
