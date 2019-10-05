@@ -6,7 +6,7 @@
   </div>
   <div class="post-details">
     <a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="post-title">{{ label }}</a>
-    <span class="post-author sm-margin-bottom-three sm-margin-top-three">Posted by {{ rtr_author_username }} | {{ created|date('d F Y') }}</span>
+    <span class="post-author sm-margin-bottom-three sm-margin-top-three">Posted by {{ rtr_author_username }} | {{ formatted_date }}</span>
     <p class="width-90">{{ node.body.summary }}</p>
   </div>
 </div>

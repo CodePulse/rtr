@@ -3,6 +3,7 @@
 namespace Drupal\rtr_utilities;
 
 use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
 
 /**
  * Class RTRUtilities.
@@ -17,7 +18,7 @@ class RTRUtilities {
    * @param $media_field
    *   Media field referencing the "Image" bundle.
    */
-  public function getMediaImage($media_field) {
+  public function getMediaImage($media_field, $load_image_style = FALSE) {
     $image_media_entity = $media_field->first()
       ->get('entity')
       ->getTarget()
@@ -29,7 +30,15 @@ class RTRUtilities {
         ->get('entity')
         ->getTarget()
         ->getValue();
-      $image_path = file_create_url($image_file_entity->getFileUri());
+      $style = ImageStyle::load('staff');
+      if ($load_image_style) {
+        $image_uri = $image_file_entity->getFileUri();
+        $image_path = $style->buildUrl($image_uri);
+      }
+      else {
+        $image_path = file_create_url($image_file_entity->getFileUri());
+      }
+
       return $image_path;
     }
     return '';

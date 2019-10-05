@@ -37,6 +37,7 @@ module:
   page_cache: 0
   path: 0
   quickedit: 0
+  rabbit_hole: 0
   rdf: 0
   rtr_forms: 0
   rtr_utilities: 0

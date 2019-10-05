@@ -27,6 +27,7 @@
         "drupal/core": "^8.7.0",
         "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
+        "drupal/rabbit_hole": "^1.0@beta",
         "drupal/taxonomy_import": "^1.0",
         "drupal/webform": "^5.4",
         "drush/drush": "^9.0.0",

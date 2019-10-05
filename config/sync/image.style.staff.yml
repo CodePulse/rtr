@@ -1,0 +1,15 @@
+uuid: ff4eea69-69c0-4585-8595-9a124b51264e
+langcode: en
+status: true
+dependencies: {  }
+name: staff
+label: Staff
+effects:
+  4110f044-8007-442b-b7a3-0b4758e905ce:
+    uuid: 4110f044-8007-442b-b7a3-0b4758e905ce
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 730
+      anchor: center-center

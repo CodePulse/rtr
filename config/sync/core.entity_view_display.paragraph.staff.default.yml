@@ -1,0 +1,41 @@
+uuid: 0e872ccf-dc16-498d-8fdc-fe60a8154b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.staff.field_body
+    - field.field.paragraph.staff.field_heading
+    - field.field.paragraph.staff.field_staff
+    - paragraphs.paragraphs_type.staff
+  module:
+    - text
+id: paragraph.staff.default
+targetEntityType: paragraph
+bundle: staff
+mode: default
+content:
+  field_body:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_staff:
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }
