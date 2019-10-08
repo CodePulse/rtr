@@ -1,6 +1,18 @@
 <?php
 
 /**
+ * Implements hook_theme().
+ */
+function rtr_forms_theme($existing, $type, $theme, $path) {
+  return [
+    'rtr-user-login-form' => [
+      'variables' => NULL,
+      'render element' => 'form'
+    ]
+  ];
+}
+
+/**
  * Implements hook_form_alter().  
  */
 function rtr_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
@@ -10,4 +22,11 @@ function rtr_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
       $form['elements']['service']['#value'] = $node->id();
     }
   }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function rtr_forms_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#theme'] = 'rtr-user-login-form';
 }
