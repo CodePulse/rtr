@@ -119,4 +119,35 @@ class RTRUtilities {
     }
     return $processedServiceNodes;
   }
+
+  public function getNidNav($direction, $content_type, $current_nid) {
+    // Previous & Next posts.
+    // get current id
+    // query for last nid
+    // query for next nid
+
+    $database = \Drupal::database();
+
+    if ($direction == 'previous') {
+      $operator = '<';
+    }
+    else {
+      $operator  = '>';
+    }
+    $query = $database->select('node', 'n')
+      ->fields('n', ['nid', 'type'])
+      ->condition('n.nid', $current_nid, $operator)
+      ->condition('n.type', $content_type)
+      ->range(0,1);
+
+    $nid = '';
+    $result = $query->execute();
+    foreach ($result as $record) {
+      // Do something with each $record.
+      if (isset($record->nid)) {
+        $nid = $record->nid;
+      }
+    }
+    return $nid;
+  }
 }

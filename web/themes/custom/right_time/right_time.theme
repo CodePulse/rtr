@@ -121,6 +121,34 @@ function right_time_preprocess_node(&$variables) {
       $formatted_date = \Drupal::service('date.formatter')->format($created_date, 'custom', 'd F Y');
       $variables['formatted_date'] = $formatted_date;
 
+      $previous_nid = $RTRUtilities->getNidNav('previous', 'news', $node->id());
+      $next_nid = $RTRUtilities->getNidNav('next', 'news', $node->id());
+
+
+      if (!empty($previous_nid)) {
+        $previous_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'. $previous_nid);
+        $variables['previous_alias'] = $previous_alias;
+        $variables['previous_text'] = 'Previous Post';
+        $variables['previous_icon_class'] = 'fa-angle-left';
+      }
+      else {
+        $variables['previous_alias'] = '#';
+        $variables['previous_text'] = 'This is the very first post';
+        $variables['previous_icon_class'] = ' ';
+
+      }
+      if (!empty($next_nid)) {
+        $next_alias = \Drupal::service('path.alias_manager')->getAliasByPath('/node/'. $next_nid);
+        $variables['next_alias'] = $next_alias;
+        $variables['next_text'] = 'Next Post';
+        $variables['next_icon_class'] = 'fa-angle-right';
+      }
+      else {
+        $variables['next_alias'] = '#';
+        $variables['next_text'] = 'This is the latest Post';
+        $variables['next_icon_class'] = ' ';
+      }
+
       break;
     case 'service':
       $variables['raw_title'] = $node->label();

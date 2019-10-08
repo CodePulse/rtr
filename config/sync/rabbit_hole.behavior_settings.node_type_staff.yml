@@ -1,0 +1,11 @@
+uuid: b98eb546-3f3c-4811-ae5a-f02bdfd724a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.staff
+id: node_type_staff
+action: access_denied
+allow_override: 0
+redirect: ''
+redirect_code: 301

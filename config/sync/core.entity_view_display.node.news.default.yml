@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.news.body
     - field.field.node.news.field_image
+    - field.field.node.news.field_related_news
     - node.type.news
   module:
     - text
@@ -29,6 +30,15 @@ content:
       view_mode: default
       link: false
     third_party_settings: {  }
+    region: content
+  field_related_news:
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   links:
     weight: 100
