@@ -7517,7 +7517,7 @@ html, body {
   }
 
   .navbar .accordion-menu {
-    background-color: rgba(27, 22, 28, 0.95);
+    background-color: rgba(19, 161, 207, 0.9);
     clear: both;
     min-height: 0 !important;
     position: absolute;
@@ -7602,7 +7602,7 @@ html, body {
   }
 
   .navbar .text-right {
-    background-color: rgba(27, 22, 28, 0.95);
+    background-color: rgba(19, 161, 207, 0.9);
     clear: both;
     min-height: 0;
     padding: 0;
@@ -25067,8 +25067,8 @@ xtype
   transform: translateY(-50%);
   height: 3px;
   width: 10px;
-  background-color: #ffcc00;
-  color: #ffcc00;
+  background-color: #049bcc;
+  color: #049bcc;
 }
 
 .personal-name .cd-headline.type .cd-words-wrapper::after {
