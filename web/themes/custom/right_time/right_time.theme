@@ -191,3 +191,19 @@ function right_time_preprocess_node(&$variables) {
       break;
   }
 }
+
+/**
+ * Implements tempate_preprocess_region__hook().
+ */
+function right_time_preprocess_region__header(&$variables) {
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  if ($current_path == '/user/login') {
+    $variables['nav_class'] = 'bg-white';
+    $variables['logo_file_name'] = 'rtr-color.png';
+  }
+  else {
+    $variables['nav_class'] = 'nav-white';
+    $variables['logo_file_name'] = 'rtr-white.png';
+  }
+}
