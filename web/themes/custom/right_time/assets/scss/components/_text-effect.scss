@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -1267,4 +1267,23 @@ xpush
         -o-transform: translateX(100%);
         transform: translateX(100%);
     }
+}
+
+/**
+Custom RTR STYLING
+ */
+
+h1, h2, h3 {
+  background: linear-gradient(to right, #8A2387, #F27121);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.video-background {
+  h1, h2, h3, h4, h5, h6 {
+    background: unset;
+    background-clip: unset;
+    -webkit-background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
 }

@@ -225,7 +225,7 @@ i { color: #9a9a9a; margin: 0 3px}
 .parallax-gray-bg{ background: rgba(246,246,246,1)}
 .bg-light-orange { background-color: #ef824c !important;}
 .bg-inherit { background-color: inherit !important;}
-
+.bg-rtr-gradient { background: linear-gradient(to right, #8A2387, #F27121 );}
 /* opacity */
 .opacity-light{ position: absolute; height: 100%; width: 100%; opacity: 0.5; z-index: 1; top:0; left: 0 }
 .opacity-medium{ position: absolute; height: 100%; width: 100%; opacity: 0.7; z-index: 1; top:0; left: 0 }
@@ -1754,7 +1754,7 @@ ul.list-line li span {min-width:130px; display:inline-block}
 .shop-newsletter input { border:1px solid rgba(255,255,255,.2); background: transparent; width:75%; margin-top:25px; text-align: center}
 .text-block { height:296px; display:table; padding: 15px; }
 .text-block-inner { display: table-cell; vertical-align: middle; border:1px solid rgba(0,0,0,.15); background: #fff; }
-.text-block:hover { background:#000;}
+.text-block:hover { background:linear-gradient(to right, #8A2387, #F27121 );}
 .text-block:hover .text-block-inner { border:2px solid rgba(255,255,255,1); background: #fff; }
 .text-block .btn {font-family: 'Open Sans', sans-serif; }
 .onsale { background:#cb0606; bottom: 16%; color: #fff; font-size: 10px; left: 50%; margin-left: -21px; line-height: 20px; padding: 0 9px; position: absolute; text-transform: uppercase; }
