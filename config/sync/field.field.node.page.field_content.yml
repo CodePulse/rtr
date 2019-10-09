@@ -1,0 +1,58 @@
+uuid: d1145448-bbe5-4bb8-a830-42ab8aad1a76
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+    - paragraphs.paragraphs_type.hero
+  module:
+    - entity_reference_revisions
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles:
+      hero: hero
+    target_bundles_drag_drop:
+      cta_bar:
+        weight: 11
+        enabled: false
+      form:
+        weight: 12
+        enabled: false
+      hero:
+        enabled: true
+        weight: 13
+      latest_jobs:
+        weight: 14
+        enabled: false
+      latest_news:
+        weight: 15
+        enabled: false
+      services:
+        weight: 16
+        enabled: false
+      staff:
+        weight: 17
+        enabled: false
+      statistics:
+        weight: 18
+        enabled: false
+      stats:
+        weight: 19
+        enabled: false
+      title_text:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

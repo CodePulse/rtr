@@ -7,10 +7,6 @@ libraries:
   - right_time/global-styling
 regions:
   header: 'Header'
-  navigation: 'Navigation'
-  breadcrumbs: 'Breadcrumbs'
-  content: 'Content'
+  main_content: 'Content'
   footer: 'Footer'
-  copyright: 'Copyright'
-  callable_blocks: 'Callable blocks'
 

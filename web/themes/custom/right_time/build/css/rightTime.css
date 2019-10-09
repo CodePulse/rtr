@@ -6454,6 +6454,30 @@ html, body {
   transition: opacity 0.8s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 
+.page-content {
+  padding: 30px 0;
+}
+
+.operations-tabs ul {
+  margin-top: 20px;
+  display: flex;
+}
+.operations-tabs ul li a {
+  padding: 10px;
+  background: #049bcc;
+  margin-right: 20px;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+}
+.operations-tabs ul li a:hover {
+  background: #04cccb;
+}
+
+.rtr-status-messages {
+  margin-top: 20px;
+}
+
 /* 
  * 	Core Owl Carousel CSS File
  *	v1.3.3

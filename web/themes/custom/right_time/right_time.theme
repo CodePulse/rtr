@@ -102,6 +102,16 @@ function right_time_preprocess_node(&$variables) {
   /** @var \Drupal\rtr_utilities\RTRUtilities $RTRUtilities */
   $RTRUtilities = \Drupal::service('rtr_utilities.default');
 
+  $block_manager = \Drupal::service('plugin.manager.block');
+  // You can hard code configuration or you load from settings.
+  $config = [];
+  $plugin_block = $block_manager->createInstance('local_tasks_block', $config);
+  $render = $plugin_block->build();
+
+  $messages_plugin_block = $block_manager->createInstance('system_messages_block', $config);
+  $messages_render = $messages_plugin_block->build();
+  $variables['rtr_messages'] = $messages_render;
+  $variables['operation_tabs'] = $render;
   switch($node->bundle()) {
     case 'news':
       if (!$node->get('field_image')->isEmpty()) {
@@ -187,6 +197,14 @@ function right_time_preprocess_node(&$variables) {
       if (!$node->get('field_twitter')->isEmpty()){
         $url = $node->get('field_twitter')->getString();
         $variables['twitter_url'] = $url;
+      }
+      break;
+    case 'page':
+      if (!$node->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
       }
       break;
   }

@@ -1,0 +1,25 @@
+.operations-tabs {
+  ul {
+    margin-top: 20px;
+    display: flex;
+
+    li {
+      a {
+        padding: 10px;
+        background: #049bcc;
+        margin-right: 20px;
+        border-radius: 3px;
+        text-align: center;
+
+        &:hover {
+          background: #04cccb;
+        }
+
+        color: #fff;
+      }
+    }
+  }
+}
+.rtr-status-messages {
+  margin-top: 20px;
+}

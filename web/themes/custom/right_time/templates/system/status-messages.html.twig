@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override for status messages.
+ *
+ * Displays status, error, and warning messages, grouped by type.
+ *
+ * An invisible heading identifies the messages for assistive technology.
+ * Sighted users see a colored box. See http://www.w3.org/TR/WCAG-TECHS/H69.html
+ * for info.
+ *
+ * Add an ARIA label to the contentinfo area so that assistive technology
+ * user agents will better describe this landmark.
+ *
+ * Available variables:
+ * - message_list: List of messages to be displayed, grouped by type.
+ * - status_headings: List of all status types.
+ * - attributes: HTML attributes for the element, including:
+ *   - class: HTML classes.
+ */
+#}
+<div data-drupal-messages>
+  <div class="rtr-status-messages">
+  {% for type, messages in message_list %}
+    {% if type == 'status' %}
+      <div class="alert alert-success fade in" role="alert">
+        <i class="fa fa-thumbs-up alert-success"></i>
+        {{ messages|first }}
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+      </div>
+    {% elseif type == 'warning' %}
+      <div class="alert alert-warning fade in" role="alert">
+        <i class="fa fa-question-circle alert-warning"></i>
+        {{ messages|first }}
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+      </div>
+    {% elseif type == 'error' %}
+      <div class="alert alert-danger fade in" role="alert">
+        <i class="fa fa-warning alert-danger"></i>
+        {{ messages|first }}
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+      </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+
+</div>
+
+
+
