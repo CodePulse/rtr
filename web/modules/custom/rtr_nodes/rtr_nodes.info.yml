@@ -1,0 +1,5 @@
+name: RTR - Nodes.
+type: module
+description: RTR Nodes - Anything node related.
+core: 8.x
+package: custom

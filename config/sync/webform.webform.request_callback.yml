@@ -12,7 +12,7 @@ id: request_callback
 title: 'Request a callback'
 description: ''
 category: ''
-elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\n  '#required': true\n  '#international': true\n  '#international_initial_country': GB\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\npreferred_date_time:\n  '#type': datetime\n  '#title': 'Preferred date/time'\n  '#required': true\n  '#date_year_range': '2019:2020'\n  '#date_time_min': '09:00:00'\n  '#date_time_max': '17:30:00'\n  '#date_time_step': '60'"
+elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\n  '#required': true\n  '#international': true\n  '#international_initial_country': GB\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\npreferred_date_time:\n  '#type': datetime\n  '#title': 'Preferred date/time'\n  '#required': true\n  '#date_year_range': '2019:2020'\n  '#date_time_min': '09:00:00'\n  '#date_time_max': '17:30:00'\n  '#date_time_step': '60'\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA"
 css: ''
 javascript: ''
 settings:

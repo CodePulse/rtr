@@ -111,13 +111,18 @@ function right_time_preprocess_node(&$variables) {
   // You can hard code configuration or you load from settings.
   $config = [];
   $plugin_block = $block_manager->createInstance('local_tasks_block', $config);
-  $render = $plugin_block->build();
+  $operations_tabs = $plugin_block->build();
 
   $messages_plugin_block = $block_manager->createInstance('system_messages_block', $config);
   $messages_render = $messages_plugin_block->build();
-  $variables['rtr_messages'] = $messages_render;
-  $variables['operation_tabs'] = $render;
 
+  $operations_theme = [
+    '#theme' => 'rtr-operations',
+    '#messages' => $messages_render,
+    '#tabs' => $operations_tabs,
+  ];
+
+  $variables['operations'] = $operations_theme;
   if ($node->hasField('field_image') && !$node->get('field_image')->isEmpty()) {
     $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
     if (!empty($image_path)) {

@@ -11548,6 +11548,10 @@ html, body {
     clear: none;
   }
 }
+.captcha {
+  margin-bottom: 15px;
+}
+
 .fa.fa-th {
   color: #4ca5d2;
 }
