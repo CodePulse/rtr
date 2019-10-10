@@ -28,6 +28,7 @@
         "drupal/paragraphs": "^1.9",
         "drupal/pathauto": "^1.4",
         "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/recaptcha": "^2.4",
         "drupal/sharethis": "^2.0@beta",
         "drupal/simple_gmap": "^1.4",
         "drupal/taxonomy_import": "^1.0",

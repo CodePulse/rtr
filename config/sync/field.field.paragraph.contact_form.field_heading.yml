@@ -1,0 +1,19 @@
+uuid: 20f0e3aa-f801-4486-a236-9504dfdf3842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.contact_form
+id: paragraph.contact_form.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: contact_form
+label: Heading
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

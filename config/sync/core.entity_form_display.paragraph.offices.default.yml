@@ -1,0 +1,30 @@
+uuid: bd47d17d-ffd4-43da-8aa4-f2548e8be9ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_heading
+    - field.field.paragraph.offices.field_offices
+    - paragraphs.paragraphs_type.offices
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_heading:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_offices:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

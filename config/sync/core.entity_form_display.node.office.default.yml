@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.office.field_email
     - field.field.node.office.field_image
     - field.field.node.office.field_location
     - field.field.node.office.field_number
@@ -23,6 +24,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_email:
+    weight: 125
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
   field_image:
     weight: 122
     settings:

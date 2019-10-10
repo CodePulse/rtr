@@ -18,7 +18,7 @@ class RTRUtilities {
    * @param $media_field
    *   Media field referencing the "Image" bundle.
    */
-  public function getMediaImage($media_field, $load_image_style = FALSE) {
+  public function getMediaImage($media_field, $load_image_style = FALSE, $image_style = NULL) {
     $image_media_entity = $media_field->first()
       ->get('entity')
       ->getTarget()
@@ -30,8 +30,8 @@ class RTRUtilities {
         ->get('entity')
         ->getTarget()
         ->getValue();
-      $style = ImageStyle::load('staff');
       if ($load_image_style) {
+        $style = ImageStyle::load($image_style);
         $image_uri = $image_file_entity->getFileUri();
         $image_path = $style->buildUrl($image_uri);
       }

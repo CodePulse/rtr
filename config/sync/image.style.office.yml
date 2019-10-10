@@ -1,0 +1,15 @@
+uuid: 209c969c-f34e-40fc-9c89-cb593a52d784
+langcode: en
+status: true
+dependencies: {  }
+name: office
+label: Office
+effects:
+  11d0bc87-7eed-441b-8269-7b2709e37563:
+    uuid: 11d0bc87-7eed-441b-8269-7b2709e37563
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 415
+      anchor: center-center

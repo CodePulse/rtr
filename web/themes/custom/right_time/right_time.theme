@@ -9,6 +9,10 @@ function right_time_preprocess_paragraph(&$variables) {
   /** @var \Drupal\rtr_utilities\RTRUtilities $RTRUtilities */
   $RTRUtilities = \Drupal::service('rtr_utilities.default');
 
+  if ($paragraph->hasField('field_heading') && !$paragraph->get('field_heading')->isEmpty()) {
+    $variables['field_heading'] = $paragraph->get('field_heading')->getString();
+  }
+
   switch ($paragraph->bundle()) {
     case 'hero':
       if (!$paragraph->get('field_image')->isEmpty()) {
@@ -89,6 +93,7 @@ function right_time_preprocess_paragraph(&$variables) {
         $variables['latest_jobs_block'] = $latest_news_block;
       }
       break;
+    case 'contact_form':
   }
 }
 
@@ -112,6 +117,14 @@ function right_time_preprocess_node(&$variables) {
   $messages_render = $messages_plugin_block->build();
   $variables['rtr_messages'] = $messages_render;
   $variables['operation_tabs'] = $render;
+
+  if ($node->hasField('field_image') && !$node->get('field_image')->isEmpty()) {
+    $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+    if (!empty($image_path)) {
+      $variables['image_path'] = $image_path;
+    }
+  }
+
   switch($node->bundle()) {
     case 'news':
       if (!$node->get('field_image')->isEmpty()) {
@@ -185,7 +198,7 @@ function right_time_preprocess_node(&$variables) {
       break;
     case 'staff':
       if (!$node->get('field_image')->isEmpty()) {
-        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'), TRUE);
+        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'), TRUE, 'staff');
         if (!empty($image_path)) {
           $variables['image_path'] = $image_path;
         }
@@ -199,12 +212,18 @@ function right_time_preprocess_node(&$variables) {
         $variables['twitter_url'] = $url;
       }
       break;
-    case 'page':
+    case 'office':
       if (!$node->get('field_image')->isEmpty()) {
-        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'), TRUE, 'office');
         if (!empty($image_path)) {
           $variables['image_path'] = $image_path;
         }
+      }
+      if(!$node->get('field_email')->isEmpty()) {
+        $variables['office_email'] = $node->get('field_email')->getString();
+      }
+      if(!$node->get('field_number')->isEmpty()) {
+        $variables['office_number'] = $node->get('field_number')->getString();
       }
       break;
   }

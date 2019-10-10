@@ -1,0 +1,31 @@
+uuid: 2f8f133a-832c-4229-87ed-f4ca479e86b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.offices.field_heading
+    - field.field.paragraph.offices.field_offices
+    - paragraphs.paragraphs_type.offices
+id: paragraph.offices.default
+targetEntityType: paragraph
+bundle: offices
+mode: default
+content:
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_offices:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

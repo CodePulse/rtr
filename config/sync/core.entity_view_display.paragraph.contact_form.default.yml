@@ -1,0 +1,41 @@
+uuid: 3f03af26-9b86-4e46-b54f-d8405ae3f188
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_form.field_body
+    - field.field.paragraph.contact_form.field_form
+    - field.field.paragraph.contact_form.field_heading
+    - paragraphs.paragraphs_type.contact_form
+  module:
+    - text
+    - webform
+id: paragraph.contact_form.default
+targetEntityType: paragraph
+bundle: contact_form
+mode: default
+content:
+  field_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_form:
+    weight: 2
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  field_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }
