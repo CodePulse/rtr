@@ -44,8 +44,10 @@ module:
   rtr_utilities: 0
   search: 0
   shortcut: 0
+  simple_gmap: 0
   system: 0
   taxonomy: 0
+  telephone: 0
   text: 0
   token: 0
   toolbar: 0

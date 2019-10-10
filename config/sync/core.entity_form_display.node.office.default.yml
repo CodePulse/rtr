@@ -3,31 +3,46 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.office.body
+    - field.field.node.office.field_image
+    - field.field.node.office.field_location
+    - field.field.node.office.field_number
     - node.type.office
   module:
+    - address
+    - media_library
     - path
-    - text
+    - telephone
 id: node.office.default
 targetEntityType: node
 bundle: office
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_image:
+    weight: 122
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_location:
+    weight: 123
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_number:
+    weight: 124
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
   path:
     type: path
     weight: 30

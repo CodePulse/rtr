@@ -3,22 +3,39 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.office.body
+    - field.field.node.office.field_image
+    - field.field.node.office.field_location
+    - field.field.node.office.field_number
     - node.type.office
   module:
-    - text
+    - address
     - user
 id: node.office.default
 targetEntityType: node
 bundle: office
 mode: default
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 101
+  field_image:
+    weight: 102
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_location:
+    weight: 103
+    label: above
     settings: {  }
     third_party_settings: {  }
+    type: address_default
+    region: content
+  field_number:
+    weight: 104
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
     region: content
   links:
     weight: 100

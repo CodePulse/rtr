@@ -1,0 +1,23 @@
+uuid: 328a216b-af09-4093-83da-707a92a649c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_address
+    - paragraphs.paragraphs_type.map
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_address:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

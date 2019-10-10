@@ -1,0 +1,49 @@
+uuid: 1e290731-600c-41ef-a2b2-903d6fe136dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location
+    - node.type.office
+  module:
+    - address
+id: node.office.field_location
+field_name: field_location
+entity_type: node
+bundle: office
+label: Address
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    GB: GB
+    US: US
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: required
+    addressLine2:
+      override: required
+    postalCode:
+      override: optional
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+    locality:
+      override: required
+    administrativeArea:
+      override: optional
+  fields: {  }
+field_type: address

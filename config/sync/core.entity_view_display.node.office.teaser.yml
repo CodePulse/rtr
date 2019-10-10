@@ -4,27 +4,36 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.office.body
+    - field.field.node.office.field_image
+    - field.field.node.office.field_location
     - node.type.office
   module:
-    - text
+    - address
     - user
 id: node.office.teaser
 targetEntityType: node
 bundle: office
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
-    weight: 101
-    settings:
-      trim_length: 600
-    third_party_settings: {  }
+  field_image:
+    type: entity_reference_entity_view
+    weight: 2
     region: content
-  links:
-    weight: 100
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_location:
+    type: address_default
+    weight: 3
+    region: content
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+  links:
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

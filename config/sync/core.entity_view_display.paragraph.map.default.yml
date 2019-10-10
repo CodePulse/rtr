@@ -1,0 +1,34 @@
+uuid: ffffa7a4-0cc9-46a3-b05e-ea1d464f2798
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.map.field_address
+    - paragraphs.paragraphs_type.map
+  module:
+    - simple_gmap
+id: paragraph.map.default
+targetEntityType: paragraph
+bundle: map
+mode: default
+content:
+  field_address:
+    weight: 0
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: 100%
+      iframe_height: '440'
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_static_map: false
+      include_link: false
+      include_text: false
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+hidden: {  }

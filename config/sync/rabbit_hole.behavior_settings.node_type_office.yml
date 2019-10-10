@@ -1,0 +1,11 @@
+uuid: 52da7b76-7a87-4b96-ada2-9a296163e91e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.office
+id: node_type_office
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
