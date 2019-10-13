@@ -17,7 +17,7 @@ entity_type: node
 bundle: service
 label: Content
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -46,6 +46,9 @@ settings:
       services:
         weight: 13
         enabled: false
+      contact_form:
+        weight: 14
+        enabled: false
       statistics:
         enabled: true
         weight: 14
@@ -54,5 +57,17 @@ settings:
         enabled: false
       title_text:
         weight: 16
+        enabled: false
+      latest_jobs:
+        weight: 18
+        enabled: false
+      map:
+        weight: 20
+        enabled: false
+      offices:
+        weight: 21
+        enabled: false
+      staff:
+        weight: 23
         enabled: false
 field_type: entity_reference_revisions

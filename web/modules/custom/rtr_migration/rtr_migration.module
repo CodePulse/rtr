@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains rtr_migration.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function rtr_migration_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the rtr_migration module.
+    case 'help.page.rtr_migration':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('RTR Migration module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function rtr_migration_theme() {
+  return [
+    'rtr_migration' => [
+      'render element' => 'children',
+    ],
+  ];
+}

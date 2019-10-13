@@ -1,0 +1,125 @@
+uuid: 721085a9-eab7-4fa7-ac80-be0d9bc26bea
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_static
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Static)'
+source:
+  plugin: d7_node_revision
+  node_type: static
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_static/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_search_banner_image:
+    -
+      plugin: sub_process
+      source: field_search_banner_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_page_heading:
+    -
+      plugin: get
+      source: field_page_heading
+  field_middle_text_on_left:
+    -
+      plugin: get
+      source: field_middle_text_on_left
+  field_middle_image:
+    -
+      plugin: sub_process
+      source: field_middle_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_middle_text_on_right:
+    -
+      plugin: get
+      source: field_middle_text_on_right
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: static
+migration_dependencies:
+  required:
+    - upgrade_d7_node_article
+    - upgrade_d7_node_banner
+    - upgrade_d7_node_job_opening
+    - upgrade_d7_node_news
+    - upgrade_d7_node_page
+    - upgrade_d7_node_static
+    - upgrade_d7_node_team
+    - upgrade_d7_node_testimonials
+    - upgrade_d7_node_webform
+  optional: {  }

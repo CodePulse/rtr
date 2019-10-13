@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.job.body
     - field.field.node.job.field_contract_type
     - field.field.node.job.field_location
+    - field.field.node.job.field_related_service
     - field.field.node.job.field_salary
-    - field.field.node.job.field_similar_jobs
     - field.field.node.job.field_start_date
     - node.type.job
   module:
@@ -47,21 +47,18 @@ content:
     third_party_settings: {  }
     type: address_default
     region: content
+  field_related_service:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_salary:
     weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_similar_jobs:
-    weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
   field_start_date:
     weight: 4

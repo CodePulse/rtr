@@ -6,6 +6,7 @@ dependencies:
     - field.storage.node.field_content
     - node.type.page
     - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.stats
   module:
     - entity_reference_revisions
 id: node.page.field_content
@@ -24,6 +25,7 @@ settings:
     negate: 1
     target_bundles:
       hero: hero
+      stats: stats
     target_bundles_drag_drop:
       cta_bar:
         weight: 11
@@ -34,6 +36,9 @@ settings:
       hero:
         enabled: true
         weight: 13
+      contact_form:
+        weight: 14
+        enabled: false
       latest_jobs:
         weight: 14
         enabled: false
@@ -50,9 +55,15 @@ settings:
         weight: 18
         enabled: false
       stats:
+        enabled: true
         weight: 19
+      map:
+        weight: 20
         enabled: false
       title_text:
         weight: 20
+        enabled: false
+      offices:
+        weight: 21
         enabled: false
 field_type: entity_reference_revisions

@@ -1,0 +1,167 @@
+uuid: 63ad627d-4cb5-4162-b543-eece576dcf5c
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_job_opening
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Job Opening)'
+source:
+  plugin: d7_node_revision
+  node_type: job_opening
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_job_opening/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_salary:
+    -
+      plugin: get
+      source: field_salary
+  field_job_location:
+    -
+      plugin: get
+      source: field_job_location
+  field_job_type:
+    -
+      plugin: sub_process
+      source: field_job_type
+      process:
+        target_id: tid
+  field_specialism:
+    -
+      plugin: sub_process
+      source: field_specialism
+      process:
+        target_id: tid
+  field_application_email:
+    -
+      plugin: get
+      source: field_application_email
+  field_application_url:
+    -
+      plugin: get
+      source: field_application_url
+  field_job_reference:
+    -
+      plugin: get
+      source: field_job_reference
+  field_job_duration:
+    -
+      plugin: get
+      source: field_job_duration
+  field_job_id:
+    -
+      plugin: get
+      source: field_job_id
+  field_job_sartdate:
+    -
+      plugin: get
+      source: field_job_sartdate
+  field_salary_currency:
+    -
+      plugin: get
+      source: field_salary_currency
+  field_job_skills:
+    -
+      plugin: sub_process
+      source: field_job_skills
+      process:
+        target_id: tid
+  field_salary_from:
+    -
+      plugin: get
+      source: field_salary_from
+  field_salary_to:
+    -
+      plugin: get
+      source: field_salary_to
+  field_salary_per:
+    -
+      plugin: get
+      source: field_salary_per
+  field_salary_benefits:
+    -
+      plugin: get
+      source: field_salary_benefits
+  field_days_to_advertise:
+    -
+      plugin: get
+      source: field_days_to_advertise
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: job_opening
+migration_dependencies:
+  required:
+    - upgrade_d7_node_article
+    - upgrade_d7_node_banner
+    - upgrade_d7_node_job_opening
+    - upgrade_d7_node_news
+    - upgrade_d7_node_page
+    - upgrade_d7_node_static
+    - upgrade_d7_node_team
+    - upgrade_d7_node_testimonials
+    - upgrade_d7_node_webform
+  optional: {  }

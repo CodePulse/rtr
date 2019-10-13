@@ -84,6 +84,10 @@ class RTRUtilities {
       $node_url = Url::fromUri($link_values['uri']);
       $link_path = $node_url->toString();
     }
+    elseif (strpos($partial_uri, 'internal:/') !== FALSE ) {
+      $explode_internal_url = explode('internal:', $link_values['uri']);
+      $link_path = $explode_internal_url[1];
+    }
     else {
       $link_path = $link_values['uri'];
     }

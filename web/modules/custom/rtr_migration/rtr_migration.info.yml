@@ -1,0 +1,5 @@
+name: 'rtr_migration'
+type: module
+description: 'RTR Migration module'
+core: 8.x
+package: 'Custom'

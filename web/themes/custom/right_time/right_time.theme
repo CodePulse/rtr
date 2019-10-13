@@ -44,7 +44,6 @@ function right_time_preprocess_paragraph(&$variables) {
           $variables['field_secondary_cta'] = $field_secondary_cta;
         }
       }
-      $e=3;
       break;
     case 'statistics':
       if (!$paragraph->get('field_image')->isEmpty()) {
@@ -191,14 +190,30 @@ function right_time_preprocess_node(&$variables) {
         }
       }
       $variables['service_nodes'] = $RTRUtilities->loadAllServices();
+      $view = \Drupal\views\Views::getView('related_jobs');
+      if (is_object($view)) {
+        $view->setDisplay('block');
+        $view->preExecute();
+        $view->execute();
+        $related_jobs_block = $view->buildRenderable('block');
+        $variables['related_jobs_block'] = $related_jobs_block;
+      }
+
       break;
     case 'job':
       //salary
-      $salary = $node->get('field_salary')->first()->getString();
-      $address = $node->get('field_location')->first()->getValue();
-      $contract_type = $node->get('field_contract_type')->first()->get('entity')->getTarget()->getValue();
+      if (!$node->get('field_salary')->isEmpty()) {
+        $salary = $node->get('field_salary')->first()->getString();
+      }
+      if (!$node->get('field_location')->isEmpty()) {
+        $address = $node->get('field_location')->first()->getValue();
+      }
+      if (!$node->get('field_contract_type')->isEmpty()) {
+        $contract_type_term = $node->get('field_contract_type')->first()->get('entity')->getTarget()->getValue();
+        $contract_type_term_label = $contract_type_term->label();
+      }
 
-      $job_meta = $address['locality'] . ' | ' . $contract_type->label() . ' | £' . number_format($salary);
+      $job_meta = $address['locality'] . ' | ' . $contract_type_term_label . ' | £' . number_format($salary);
       $variables['job_meta'] = $job_meta;
       break;
     case 'staff':
