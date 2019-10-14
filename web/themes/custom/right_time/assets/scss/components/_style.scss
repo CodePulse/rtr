@@ -1753,9 +1753,11 @@ ul.list-line li span {min-width:130px; display:inline-block}
 .shop-newsletter{ padding:8% 45px 0;}
 .shop-newsletter input { border:1px solid rgba(255,255,255,.2); background: transparent; width:75%; margin-top:25px; text-align: center}
 .text-block { height:296px; display:table; padding: 15px; }
-.text-block-inner { display: table-cell; vertical-align: middle; border:1px solid rgba(0,0,0,.15); background: #fff; }
-.text-block:hover { background:linear-gradient(to right, #8A2387, #F27121 );}
-.text-block:hover .text-block-inner { border:2px solid rgba(255,255,255,1); background: #fff; }
+.text-block-inner { display: table-cell; vertical-align: middle; border:1px solid rgba(0,0,0,.15); background-color: #fff; }
+.rtr-services .text-block-inner { display: table-cell; vertical-align: middle; border:1px solid rgba(0,0,0,.15); background-color: rgba(238, 238, 238, 0.81) !important; background-blend-mode: saturation; background-size: cover; background-position: center; }
+
+.text-block:hover { background-image:linear-gradient(to right, #8A2387, #F27121 );}
+.text-block:hover .text-block-inner { border:2px solid rgba(255,255,255,1); background-color: #fff; }
 .text-block .btn {font-family: 'Open Sans', sans-serif; }
 .onsale { background:#cb0606; bottom: 16%; color: #fff; font-size: 10px; left: 50%; margin-left: -21px; line-height: 20px; padding: 0 9px; position: absolute; text-transform: uppercase; }
 .new { background: #f1a004; bottom: 16%; color: #fff; font-size: 10px; left: 50%; margin-left: -21px; line-height: 20px; padding: 0 9px; position: absolute; text-transform: uppercase; }

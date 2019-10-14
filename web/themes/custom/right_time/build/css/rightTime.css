@@ -22629,16 +22629,26 @@ ul.list-line li span {
   display: table-cell;
   vertical-align: middle;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;
+  background-color: #fff;
+}
+
+.rtr-services .text-block-inner {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(238, 238, 238, 0.81) !important;
+  background-blend-mode: saturation;
+  background-size: cover;
+  background-position: center;
 }
 
 .text-block:hover {
-  background: linear-gradient(to right, #8a2387, #f27121);
+  background-image: linear-gradient(to right, #8a2387, #f27121);
 }
 
 .text-block:hover .text-block-inner {
   border: 2px solid white;
-  background: #fff;
+  background-color: #fff;
 }
 
 .text-block .btn {
