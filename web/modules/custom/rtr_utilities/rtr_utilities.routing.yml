@@ -1,0 +1,14 @@
+rtr_utilities.not-found:
+  path: '/not-found'
+  defaults:
+    _controller: '\Drupal\rtr_utilities\Controller\StatusController::notFound'
+    _title: 'Right Time Recruitment | Page not found'
+  requirements:
+    _permission: 'access content'
+rtr_utilities.access-denied:
+  path: '/access-denied'
+  defaults:
+    _controller: '\Drupal\rtr_utilities\Controller\StatusController::accessDenied'
+    _title: 'Right Time Recruitment | Access denied'
+  requirements:
+    _permission: 'access content'

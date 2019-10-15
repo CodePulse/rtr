@@ -262,8 +262,9 @@ function right_time_preprocess_node(&$variables) {
  */
 function right_time_preprocess_region__header(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
+  $node = \Drupal::routeMatch()->getParameter('node');
 
-  if ($current_path == '/user/login' || $current_path == '/user/register') {
+  if ($current_path == '/user/login' || $current_path == '/user/register' || (!empty($node)) && $node->bundle() == 'job') {
     $variables['nav_class'] = 'bg-white';
     $variables['logo_file_name'] = 'rtr-color.png';
   }

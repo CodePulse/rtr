@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.job.field_location
     - field.field.node.job.field_related_service
     - field.field.node.job.field_salary
+    - field.field.node.job.field_similar_jobs
     - field.field.node.job.field_start_date
     - node.type.job
   module:
@@ -44,7 +45,7 @@ content:
     region: content
   field_related_service:
     weight: 107
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -58,6 +59,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_similar_jobs:
+    weight: 108
+    label: hidden
+    settings:
+      view_mode: mini_teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
     region: content
   field_start_date:
     weight: 103

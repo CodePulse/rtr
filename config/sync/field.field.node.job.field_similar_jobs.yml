@@ -1,0 +1,27 @@
+uuid: 3a633cf5-e1b7-4fe9-a70f-5a4281b25258
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_similar_jobs
+    - node.type.job
+id: node.job.field_similar_jobs
+field_name: field_similar_jobs
+entity_type: node
+bundle: job
+label: 'Similar jobs'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      job: job
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
