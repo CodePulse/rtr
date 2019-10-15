@@ -1,0 +1,9 @@
+uuid: 80334f29-27ce-46ad-a05b-623928a73897
+langcode: en
+status: true
+dependencies: {  }
+id: title_text_background_image
+label: 'Title, Text & Background Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

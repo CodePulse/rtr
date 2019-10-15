@@ -1,0 +1,21 @@
+uuid: 163ec2fa-825e-4be4-871c-59d9a9fa1e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_salary
+  module:
+    - options
+    - user
+id: user.user.field_salary
+field_name: field_salary
+entity_type: user
+bundle: user
+label: Salary
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

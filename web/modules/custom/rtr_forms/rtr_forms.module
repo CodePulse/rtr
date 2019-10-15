@@ -8,6 +8,10 @@ function rtr_forms_theme($existing, $type, $theme, $path) {
     'rtr-user-login-form' => [
       'variables' => NULL,
       'render element' => 'form'
+    ],
+    'rtr-register-form' => [
+      'variables' => NULL,
+      'render element' => 'form'
     ]
   ];
 }
@@ -29,4 +33,28 @@ function rtr_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
  */
 function rtr_forms_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $form['#theme'] = 'rtr-user-login-form';
+}
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function rtr_forms_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#theme'] = 'rtr-register-form';
+  $form['actions']['submit']['#submit'][] = 'rtr_forms_user_register_submit_handler';
+  $block_manager = \Drupal::service('plugin.manager.block');
+  $config = [];
+  $messages_plugin_block = $block_manager->createInstance('system_messages_block', $config);
+  $messages_render = $messages_plugin_block->build();
+
+  $operations_theme = [
+    '#theme' => 'rtr-operations',
+    '#messages' => $messages_render,
+    '#tabs' => $operations_tabs,
+  ];
+
+  $variables['operations'] = $operations_theme;
+
+}
+
+function rtr_forms_user_register_submit_handler($form, &$form_state) {
+  $form_state->setRedirect('user.login');
 }

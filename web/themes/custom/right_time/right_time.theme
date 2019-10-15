@@ -92,7 +92,15 @@ function right_time_preprocess_paragraph(&$variables) {
         $variables['latest_jobs_block'] = $latest_news_block;
       }
       break;
-    case 'contact_form':
+    case 'title_text_background_image':
+      if (!$paragraph->get('field_image')->isEmpty()) {
+        $image_path = $RTRUtilities->getMediaImage($paragraph->get('field_image'));
+        if (!empty($image_path)) {
+          $variables['image_path'] = $image_path;
+        }
+      }
+      break;
+
   }
 }
 
@@ -255,7 +263,7 @@ function right_time_preprocess_node(&$variables) {
 function right_time_preprocess_region__header(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
 
-  if ($current_path == '/user/login') {
+  if ($current_path == '/user/login' || $current_path == '/user/register') {
     $variables['nav_class'] = 'bg-white';
     $variables['logo_file_name'] = 'rtr-color.png';
   }

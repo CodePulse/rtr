@@ -1,0 +1,40 @@
+uuid: def4e30b-3640-4780-b2e9-85dda09adda7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_text_background_image.field_body
+    - field.field.paragraph.title_text_background_image.field_heading
+    - field.field.paragraph.title_text_background_image.field_image
+    - paragraphs.paragraphs_type.title_text_background_image
+  module:
+    - text
+id: paragraph.title_text_background_image.default
+targetEntityType: paragraph
+bundle: title_text_background_image
+mode: default
+content:
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden: {  }

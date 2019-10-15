@@ -1,0 +1,33 @@
+uuid: af2e1107-ede0-4cef-992d-db7a46f9b22e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_salary
+field_name: field_salary
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '20000_30000'
+      label: '£20,000 to £30,000'
+    -
+      value: '30001_70000'
+      label: '£30,001 to £70,000'
+    -
+      value: '70001_100000'
+      label: '£70,001 to £100,000'
+    -
+      value: '100001_300001'
+      label: '£100,001 to £300,000'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

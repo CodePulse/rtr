@@ -1,0 +1,30 @@
+uuid: 1f195a0d-71fe-45cb-866f-04a88fc83103
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_contract_type
+    - taxonomy.vocabulary.contract_type
+  module:
+    - user
+id: user.user.field_contract_type
+field_name: field_contract_type
+entity_type: user
+bundle: user
+label: 'Contract type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      contract_type: contract_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
