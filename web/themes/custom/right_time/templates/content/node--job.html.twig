@@ -25,13 +25,22 @@
 </section>
 <!-- end head section -->
 {{ operations }}
-<section class="wow fadeIn">
+<section class="wow fadeIn padding-four">
   <div class="container">
     <div class="row">
       <!-- content  -->
       <div class="col-md-8 col-sm-8">
         {{ content.body }}
-      </div>      <!-- end content  -->
+        <div class="text-center text-large">
+          {% if logged_in %}
+            {{ job_application_form }}
+          {% else %}
+              You need to be <a href="{{ job_apply_link }}">registered</a> to apply for this job.
+          {% endif %}
+        </div>
+
+      </div>
+      <!-- end content  -->
       <!-- sidebar  -->
       <div class="col-md-3 col-sm-4 sidebar col-md-offset-1 xs-margin-top-seven">
         <!-- widget  -->

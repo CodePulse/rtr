@@ -223,6 +223,18 @@ function right_time_preprocess_node(&$variables) {
 
       $job_meta = $address['locality'] . ' | ' . $contract_type_term_label . ' | £' . number_format($salary);
       $variables['job_meta'] = $job_meta;
+
+
+      if (\Drupal::currentUser()->isAnonymous()) {
+        $destination = \Drupal::destination()->get();
+        $path_url = Drupal\Core\URL::fromUserInput('/user/register', array('query' => array('destination' => $destination)))->toString();
+        $variables['job_apply_link'] = $path_url;
+      }
+      else {
+        $webform = \Drupal::entityTypeManager()->getStorage('webform')->load('job');
+        $form = $webform->getSubmissionForm();
+        $variables['job_application_form'] = $form;
+      }
       break;
     case 'staff':
       if (!$node->get('field_image')->isEmpty()) {
