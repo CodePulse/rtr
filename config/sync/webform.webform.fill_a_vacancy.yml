@@ -12,7 +12,7 @@ id: fill_a_vacancy
 title: 'Fill a vacancy'
 description: ''
 category: ''
-elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncompany_name:\n  '#type': textfield\n  '#title': 'Company name'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\njob_description:\n  '#type': webform_document_file\n  '#title': 'Job description'\n  '#required': true\n  '#uri_scheme': public\n  '#file_extensions': 'rtf pdf doc docx odt ppt pptx'"
+elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncompany_name:\n  '#type': textfield\n  '#title': 'Company name'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\njob_description:\n  '#type': webform_document_file\n  '#title': 'Job description'\n  '#required': true\n  '#uri_scheme': public\n  '#file_extensions': 'rtf pdf doc docx odt ppt pptx'\ncaptcha:\n  '#type': captcha"
 css: ''
 javascript: ''
 settings:
@@ -100,7 +100,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: message
   confirmation_title: ''
-  confirmation_message: ''
+  confirmation_message: 'Thank you for this Vacancy. We will be in touch with you to discuss further.'
   confirmation_url: ''
   confirmation_attributes: {  }
   confirmation_back: true
@@ -173,4 +173,38 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
