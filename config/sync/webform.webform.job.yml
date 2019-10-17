@@ -12,7 +12,7 @@ id: job
 title: Job
 description: ''
 category: ''
-elements: "job_reference:\n  '#type': webform_entity_select\n  '#title': 'Job reference'\n  '#access_create_roles':\n    - administrator\n    - content_administrator\n  '#target_type': node\n  '#selection_handler': 'default:node'\n  '#selection_settings':\n    target_bundles:\n      job: job\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#access_create_roles':\n    - authenticated\n  '#submit__label': Apply!\n  '#submit__attributes':\n    class:\n      - 'highlight-button-dark btn btn-large btn-round button xs-margin-bottom-five'"
+elements: "job_reference:\n  '#type': webform_entity_select\n  '#title': Job\n  '#access_create_roles':\n    - administrator\n    - content_administrator\n  '#target_type': node\n  '#selection_handler': 'default:node'\n  '#selection_settings':\n    target_bundles:\n      job: job\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#access_create_roles':\n    - authenticated\n  '#submit__label': Apply!\n  '#submit__attributes':\n    class:\n      - 'highlight-button-dark btn btn-large btn-round button xs-margin-bottom-five'"
 css: ''
 javascript: ''
 settings:
@@ -115,13 +115,13 @@ settings:
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
-  limit_user: 1
+  limit_user: null
   limit_user_interval: null
   limit_user_message: 'You have already applied for this job!'
   limit_user_unique: false
   entity_limit_total: null
   entity_limit_total_interval: null
-  entity_limit_user: null
+  entity_limit_user: 1
   entity_limit_user_interval: null
   purge: none
   purge_days: null

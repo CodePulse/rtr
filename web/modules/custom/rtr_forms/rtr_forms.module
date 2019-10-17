@@ -26,6 +26,12 @@ function rtr_forms_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
       $form['elements']['service']['#value'] = $node->id();
     }
   }
+  if (isset($form['#webform_id']) && $form['#webform_id'] == 'job') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface) {
+      $form['elements']['job_reference']['#value'] = $node->id();
+    }
+  }
 }
 
 /**
