@@ -26139,16 +26139,16 @@ xpush
 /**
 Custom RTR STYLING
  */
-h1, h2, h3 {
+h1:not(.cd-headline), h2, h3 {
   background: linear-gradient(to right, #8a2387, #f27121);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.video-background h1, .video-background h2, .video-background h3, .video-background h4, .video-background h5, .video-background h6 {
+.video-background h1:not(.cd-headline),
+.video-background h2, .video-background h3, .video-background h4, .video-background h5, .video-background h6 {
   background: unset;
   background-clip: unset;
   -webkit-background-clip: unset;
-  -webkit-text-fill-color: unset;
 }
