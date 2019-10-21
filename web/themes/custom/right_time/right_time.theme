@@ -247,10 +247,6 @@ function right_time_preprocess_node(&$variables) {
         $url = $node->get('field_linkedin')->getString();
         $variables['linkedin_url'] = $url;
       }
-      if (!$node->get('field_twitter')->isEmpty()){
-        $url = $node->get('field_twitter')->getString();
-        $variables['twitter_url'] = $url;
-      }
       break;
     case 'office':
       if (!$node->get('field_image')->isEmpty()) {
