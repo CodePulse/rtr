@@ -140,7 +140,13 @@ function right_time_preprocess_node(&$variables) {
   switch($node->bundle()) {
     case 'news':
       if (!$node->get('field_image')->isEmpty()) {
-        $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        if ($variables['view_mode'] == 'teaser') {
+          $image_path = $RTRUtilities->getMediaImage($node->get('field_image'), TRUE, 'news_teaser');
+        }
+        else {
+          $image_path = $RTRUtilities->getMediaImage($node->get('field_image'));
+        }
+
         if (!empty($image_path)) {
           $variables['image_path'] = $image_path;
         }

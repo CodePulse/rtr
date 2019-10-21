@@ -11578,6 +11578,10 @@ html, body {
   color: #4ca5d2;
 }
 
+.nav > li {
+  margin: 10px 13px;
+}
+
 .toolbar-horizontal .sticky-nav {
   top: 90px !important;
 }
@@ -16637,7 +16641,8 @@ nav .container {
 }
 
 .logo {
-  max-width: 109px;
+  max-width: 150px;
+  margin-top: 15px;
 }
 
 .logo-style-2 {
