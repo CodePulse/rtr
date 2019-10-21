@@ -11586,6 +11586,15 @@ html, body {
   z-index: 100 !important;
 }
 
+.rtr-services p {
+  color: #fff !important;
+  text-shadow: 2px 2px 8px #000;
+}
+.rtr-services .highlight-button {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
 /*-----------------------------------------------------------------------------
 
         -	Revolution Slider 4.1 Captions -
@@ -22658,8 +22667,6 @@ ul.list-line li span {
   display: table-cell;
   vertical-align: middle;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  background-color: rgba(238, 238, 238, 0.81) !important;
-  background-blend-mode: saturation;
   background-size: cover;
   background-position: center;
 }
