@@ -11593,6 +11593,7 @@ html, body {
 .rtr-services .highlight-button {
   border: 2px solid #fff;
   color: #fff;
+  text-shadow: 2px 2px 8px #000;
 }
 
 /*-----------------------------------------------------------------------------
