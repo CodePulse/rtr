@@ -11560,6 +11560,10 @@ html, body {
   margin-bottom: 15px;
 }
 
+.webform-submission-fill-a-vacancy-add-form label {
+  font-weight: bold;
+}
+
 .hero-gradient {
   background-image: linear-gradient(to right, rgba(138, 35, 127, 0.8), rgba(242, 113, 33, 0.9));
   width: 100%;
@@ -16682,7 +16686,7 @@ nav .container {
 }
 
 .nav-white.sticky-nav .navbar-nav li a:hover, .nav-white.sticky-nav .navbar-nav > .open > a {
-  border-bottom-color: #fff;
+  border-bottom-color: #019ec9;
 }
 
 .nav-white.shrink-nav .navbar-nav li a:hover, .nav-white.shrink-nav .navbar-nav > .open > a {
@@ -16703,7 +16707,7 @@ nav .container {
 
 .mega-menu-full {
   -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
+  -moz-transform: translateX 0;
   -o-transform: translateX(0);
   transform: translateX(0);
 }

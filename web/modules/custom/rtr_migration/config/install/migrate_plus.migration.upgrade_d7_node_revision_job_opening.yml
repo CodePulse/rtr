@@ -9,7 +9,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: migrate_drupal_7
+migration_group: rtr_d7_to_d8
 label: 'Node revisions (Job Opening)'
 source:
   plugin: d7_node_revision
@@ -152,16 +152,8 @@ process:
       source: field_days_to_advertise
 destination:
   plugin: 'entity_revision:node'
-  default_bundle: job_opening
+  default_bundle: job
 migration_dependencies:
   required:
-    - upgrade_d7_node_article
-    - upgrade_d7_node_banner
     - upgrade_d7_node_job_opening
-    - upgrade_d7_node_news
-    - upgrade_d7_node_page
-    - upgrade_d7_node_static
-    - upgrade_d7_node_team
-    - upgrade_d7_node_testimonials
-    - upgrade_d7_node_webform
   optional: {  }

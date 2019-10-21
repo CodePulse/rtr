@@ -54,7 +54,7 @@ function rtr_forms_form_user_register_form_alter(&$form, \Drupal\Core\Form\FormS
   $operations_theme = [
     '#theme' => 'rtr-operations',
     '#messages' => $messages_render,
-    '#tabs' => $operations_tabs,
+    '#tabs' => '',
   ];
 
   $variables['operations'] = $operations_theme;
