@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.staff.field_image
     - field.field.node.staff.field_linkedin
     - field.field.node.staff.field_position
-    - field.field.node.staff.field_twitter
     - node.type.staff
   module:
     - link
@@ -54,18 +53,6 @@ content:
     label: hidden
     settings:
       link_to_entity: false
-    third_party_settings: {  }
-  field_twitter:
-    type: link
-    weight: 5
-    region: content
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
     third_party_settings: {  }
   links:
     weight: 0
