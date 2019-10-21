@@ -11574,12 +11574,16 @@ html, body {
   z-index: 2;
 }
 
-.fa.fa-th {
-  color: #4ca5d2;
-}
-
 .nav > li {
   margin: 10px 13px;
+}
+
+.nav-white a.rtr-tell {
+  color: #fff;
+}
+
+.nav-white.shrink-nav a.rtr-tell {
+  color: #000;
 }
 
 .toolbar-horizontal .sticky-nav {
