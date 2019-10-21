@@ -16,5 +16,5 @@ shared_configuration:
       password: drupalpwd
       host: localhost
       port: ''
-      database: rtr_d7
+      database: rtr_d7_two
       prefix: null

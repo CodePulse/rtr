@@ -9194,7 +9194,10 @@ html, body {
   }
 
   .blog-post-images {
-    margin-bottom: 20px;
+    width: 365px;
+    overflow: hidden;
+    background: linear-gradient(to right, #8a2387, #f27121);
+    height: 280px;
   }
 
   .post-title {
@@ -19564,9 +19567,10 @@ footer ul.list-inline li:first-child {
 }
 
 .blog-post-images {
-  width: auto;
+  width: 365px;
   overflow: hidden;
-  background-color: #4d4d4d;
+  background: linear-gradient(to right, #8a2387, #f27121);
+  height: 280px;
 }
 
 .blog-post-images img {

@@ -227,7 +227,7 @@ function right_time_preprocess_node(&$variables) {
         $contract_type_term_label = $contract_type_term->label();
       }
 
-      $job_meta = $address['locality'] . ' | ' . $contract_type_term_label . ' | £' . number_format($salary);
+      $job_meta = 'Up to £' . number_format($salary) .' per year';
       $variables['job_meta'] = $job_meta;
 
 

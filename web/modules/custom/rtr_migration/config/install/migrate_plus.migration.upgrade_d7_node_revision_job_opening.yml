@@ -9,7 +9,7 @@ cck_plugin_method: null
 migration_tags:
   - 'Drupal 7'
   - Content
-migration_group: rtr_d7_to_d8
+migration_group: migrate_d7
 label: 'Node revisions (Job Opening)'
 source:
   plugin: d7_node_revision

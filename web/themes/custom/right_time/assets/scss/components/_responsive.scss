@@ -832,7 +832,7 @@
 
     /*  blog  */
     #blog .col-sm-4 { margin-bottom: 15px; }
-    .blog-post-images { margin-bottom: 20px; }
+    .blog-post-images {width: 365px; overflow: hidden; background: linear-gradient(to right, #8A2387, #F27121 ); height: 280px; }
     .post-title { margin: 0; }
     .post-author { display: block; margin-bottom: 10px; }
     .blog-post p { padding: 0 0 20px; }

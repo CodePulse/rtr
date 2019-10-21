@@ -19,10 +19,6 @@ process:
     -
       plugin: get
       source: tnid
-  vid:
-    -
-      plugin: get
-      source: vid
   langcode:
     -
       plugin: default_value
@@ -79,8 +75,8 @@ process:
   field_salary:
     -
       plugin: get
-      source: field_salary
-  field_job_location:
+      source: field_salary_to
+  field_location:
     -
       plugin: get
       source: field_job_location

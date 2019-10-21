@@ -1085,7 +1085,7 @@ footer ul.list-inline li:first-child {padding-left: 6px}
 .blog-post p{ padding:22px 0 0 0; margin:0}
 .blog-post img { transition: all .3s ease; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; opacity:1}
 .blog-post:hover img { -ms-transform: scale(1.2,1.2); -webkit-transform: scale(1.2,1.2);  transform: scale(1.2,1.2); transition: all .3s ease; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; opacity:0.5}
-.blog-post-images { width:auto; overflow:hidden; background-color:#4d4d4d;}
+.blog-post-images {width: 365px; overflow: hidden; background: linear-gradient(to right, #8A2387, #F27121 ); height: 280px; }
 .blog-post-images img { max-width: 101%}
 .post-title {font-size: 12px; letter-spacing: 2px; text-transform: uppercase; display: block; color: #000; margin: 40px 0 0 0; font-weight: 600}
 .post-author {font-size: 10px; letter-spacing: 1px; text-transform:uppercase; color: #797979 }
