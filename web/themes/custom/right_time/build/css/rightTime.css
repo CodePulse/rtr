@@ -6856,6 +6856,11 @@ html, body {
     transform: scale(1.5);
   }
 }
+@media (max-width: 995px) {
+  .parallax-fix {
+    background-size: auto 22% !important;
+  }
+}
 /****************************************************
         media css
 *****************************************************/
@@ -11589,6 +11594,11 @@ html, body {
   color: #000;
 }
 
+@media (max-width: 995px) {
+  .logo {
+    max-width: 150px;
+  }
+}
 .toolbar-horizontal .sticky-nav {
   top: 90px !important;
 }
@@ -16648,7 +16658,7 @@ nav .container {
 }
 
 .logo {
-  max-width: 150px;
+  width: 100%;
   margin-top: 15px;
 }
 

@@ -15,10 +15,6 @@ source:
   plugin: d7_node
   node_type: job_opening
 process:
-  nid:
-    -
-      plugin: get
-      source: tnid
   langcode:
     -
       plugin: default_value
@@ -52,22 +48,6 @@ process:
     -
       plugin: get
       source: sticky
-  revision_uid:
-    -
-      plugin: get
-      source: revision_uid
-  revision_log:
-    -
-      plugin: get
-      source: log
-  revision_timestamp:
-    -
-      plugin: get
-      source: timestamp
-  comment_node_job_opening/0/status:
-    -
-      plugin: get
-      source: comment
   body:
     -
       plugin: get

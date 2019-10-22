@@ -11,3 +11,8 @@
     color: #000;
   }
 }
+@media (max-width: 995px) {
+  .logo {
+    max-width: 150px;
+  }
+}
