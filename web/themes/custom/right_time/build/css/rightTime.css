@@ -6856,11 +6856,6 @@ html, body {
     transform: scale(1.5);
   }
 }
-@media (max-width: 995px) {
-  .parallax-fix {
-    background-size: auto 22% !important;
-  }
-}
 /****************************************************
         media css
 *****************************************************/
@@ -26182,4 +26177,10 @@ h1:not(.cd-headline), h2, h3 {
   background: unset;
   background-clip: unset;
   -webkit-background-clip: unset;
+}
+
+@media (max-width: 995px) {
+  .parallax-fix {
+    background-size: auto 22% !important;
+  }
 }

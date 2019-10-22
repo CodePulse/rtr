@@ -6,3 +6,9 @@
 @import "susyone";
 
 @import "components/**";
+
+@media (max-width: 995px) {
+  .parallax-fix {
+    background-size: auto 22% !important;
+  }
+}
