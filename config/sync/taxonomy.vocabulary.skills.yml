@@ -1,8 +1,0 @@
-uuid: dfa6045c-4079-4769-9d41-4e3f800af5f5
-langcode: en
-status: true
-dependencies: {  }
-name: Skills
-vid: skills
-description: 'Skills required'
-weight: 0

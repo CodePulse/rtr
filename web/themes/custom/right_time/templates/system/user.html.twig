@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+<section class="content-top-margin page-title page-title-small bg-black">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-7 col-sm-12 wow fadeInUp" data-wow-duration="300ms">
+        <!-- page title -->
+        <h1 class="white-text">User account</h1>
+        <!-- end page title -->
+      </div>
+    </div>
+  </div>
+</section>
+{{ operations }}
+<section id="rtr-user-account" class="wow fadeIn animated no-padding margin-one">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-10 col-xs-11">
+        <article{{ attributes }}>
+          {% if content %}
+            {{- content -}}
+          {% endif %}
+        </article>
+      </div>
+      <div class="col-xs-12">
+        <h2 class="text-center">Your Job Applications</h2>
+        {{ user_applications }}
+      </div>
+    </div>
+  </div>
+</section>

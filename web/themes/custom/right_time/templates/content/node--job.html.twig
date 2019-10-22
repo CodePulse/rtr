@@ -25,7 +25,7 @@
 </section>
 <!-- end head section -->
 {{ operations }}
-<section class="wow fadeIn padding-four">
+<section id="apply-job" class="wow fadeIn padding-four">
   <div class="container">
     <div class="row">
       <!-- content  -->
@@ -35,7 +35,7 @@
           {% if logged_in %}
             {{ job_application_form }}
           {% else %}
-              You need to be <a href="{{ job_apply_link }}">registered</a> to apply for this job.
+              You need to be <a href="{{ job_apply_link }}">registered</a> or <a href="{{ job_login_link }}">logged in</a> to apply for this job.
           {% endif %}
         </div>
 

@@ -1,8 +1,0 @@
-uuid: eadfd74e-55de-4559-bf9a-a43b161a178f
-langcode: en
-status: true
-dependencies: {  }
-name: Location
-vid: location
-description: 'Location Tags'
-weight: 0

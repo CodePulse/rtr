@@ -26179,6 +26179,10 @@ h1:not(.cd-headline), h2, h3 {
   -webkit-background-clip: unset;
 }
 
+#rtr-user-account .field__label {
+  font-weight: bold;
+}
+
 @media (max-width: 995px) {
   .parallax-fix {
     background-size: auto 22% !important;

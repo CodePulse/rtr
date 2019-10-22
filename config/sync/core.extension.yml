@@ -32,11 +32,6 @@ module:
   media: 0
   media_library: 0
   menu_ui: 0
-  migrate: 0
-  migrate_drupal: 0
-  migrate_plus: 0
-  migrate_tools: 0
-  migrate_upgrade: 0
   node: 0
   options: 0
   page_cache: 0
@@ -47,7 +42,6 @@ module:
   recaptcha: 0
   rh_node: 0
   rtr_forms: 0
-  rtr_migration: 0
   rtr_nodes: 0
   rtr_utilities: 0
   search: 0

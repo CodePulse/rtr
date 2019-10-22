@@ -1,14 +1,15 @@
-<div class="key-person">
-  <div class="key-person-img"><img src="{{ image_path }}"></div>
-  <div class="key-person-details">
-    <span class="person-name black-text">{{ label }}</span> <span
-      class="person-post">{{ content.field_position }}</span>
-    <div class="separator-line bg-rtr-gradient"></div>
-    <div class="person-social">
+  <img src="{{ image_path }}" alt=""/>
+  <figure class="position-relative bg-white">
+    <span class="team-name text-uppercase black-text letter-spacing-2 display-block font-weight-600">{{ label }}</span>
+    <span class="team-post text-uppercase letter-spacing-2 display-block">{{ content.field_position }}</span>
+    <div class="person-social margin-five no-margin-bottom">
       {% if linkedin_url is not empty %}
         <a href="{{ linkedin_url }}" target="_blank"><i class="fa fa-linkedin"></i></a>
       {% endif %}
     </div>
-    <p>{{ node.body.summary }}</p>
+  </figure>
+  <div class="team-details">
+    <h5 class="team-headline white-text text-uppercase font-weight-600">{{ label }}</h5>
+    <p class="width-70 center-col light-gray-text margin-five">{{ content.body }}</p>
+    <div class="separator-line-thick bg-white"></div>
   </div>
-</div>
