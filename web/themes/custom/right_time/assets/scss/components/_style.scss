@@ -570,7 +570,6 @@ nav .container{ display: table-cell; vertical-align: middle; height: 80px; posit
 .search-form .search-input:focus{outline: none}
 .search-input ::-moz-placeholder, .search-input [placeholder] { color: #ff0000 !important; }
 .search-form .search-button {font-size:21px; color:#000; top:31px; right: 0}
-#search-header {height:100%}
 .close-search { color: #373737; position: absolute; right: 0; top: 23px; z-index: 998; cursor: pointer; }
 .close-search:hover { color: #9a9a9a;}
 .search-button { cursor: pointer;  z-index: 0; color: #373737; margin-right: 0; border: none; background: none; }
