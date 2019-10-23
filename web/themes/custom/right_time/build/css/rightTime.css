@@ -6466,6 +6466,9 @@ html, body {
   background-position: center;
 }
 
+.operations-tabs {
+  min-height: 65px;
+}
 .operations-tabs ul {
   margin-top: 20px;
   display: flex;

@@ -16,6 +16,10 @@ function rtr_forms_theme($existing, $type, $theme, $path) {
     'rtr-user-form' => [
       'variables' => NULL,
       'render element' => 'form'
+    ],
+    'rtr-user-pass' => [
+      'variables' => NULL,
+      'render element' => 'form'
     ]
   ];
 }
@@ -50,21 +54,12 @@ function rtr_forms_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormStat
  */
 function rtr_forms_form_user_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $form['#theme'] = 'rtr-user-form';
-  $config = [];
-  $block_manager = \Drupal::service('plugin.manager.block');
-
-  $messages_plugin_block = $block_manager->createInstance('system_messages_block', $config);
-  $messages_render = $messages_plugin_block->build();
-  $plugin_block = $block_manager->createInstance('local_tasks_block', $config);
-  $operations_tabs = $plugin_block->build();
-
-  $operations_theme = [
-    '#theme' => 'rtr-operations',
-    '#messages' => $messages_render,
-    '#tabs' => $operations_tabs,
-  ];
-  $form['operations'] = $operations_theme;
-
+}
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function rtr_forms_form_user_pass_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['#theme'] = 'rtr-user-pass';
 }
 
 /**

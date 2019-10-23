@@ -1,0 +1,12 @@
+{{ form.form_build_id }}
+{{ form.form_token }}
+{{ form.form_id }}
+<section class="wow fadeIn bg-gray sm-padding-top-six">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-10 col-xs-11 center-col login-box">
+        {{ form|without('operations') }}
+      </div>
+    </div>
+  </div>
+</section>

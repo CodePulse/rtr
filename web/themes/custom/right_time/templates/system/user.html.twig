@@ -16,28 +16,17 @@
  * @see template_preprocess_user()
  */
 #}
-<section class="content-top-margin page-title page-title-small bg-black">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-7 col-sm-12 wow fadeInUp" data-wow-duration="300ms">
-        <!-- page title -->
-        <h1 class="white-text">User account</h1>
-        <!-- end page title -->
-      </div>
-    </div>
-  </div>
-</section>
-{{ operations }}
+
 <section id="rtr-user-account" class="wow fadeIn animated no-padding margin-one">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 col-sm-10 col-xs-11">
-        <article{{ attributes }}>
-          {% if content %}
-            {{- content -}}
-          {% endif %}
-        </article>
-      </div>
+      {#<div class="col-md-6 col-sm-10 col-xs-11">#}
+        {#<article{{ attributes }}>#}
+          {#{% if content %}#}
+            {#{{- content -}}#}
+          {#{% endif %}#}
+        {#</article>#}
+      {#</div>#}
       <div class="col-xs-12">
         <h2 class="text-center">Your Job Applications</h2>
         {{ user_applications }}

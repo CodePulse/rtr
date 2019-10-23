@@ -17,10 +17,6 @@ source:
   constants:
     source_base_path: /var/www/codepulse/rtr_d7/public_html
 process:
-  fid:
-    -
-      plugin: get
-      source: fid
   filename:
     -
       plugin: get
