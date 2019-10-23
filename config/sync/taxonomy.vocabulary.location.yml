@@ -1,0 +1,8 @@
+uuid: 674293bb-903a-4a63-8e4a-865e7f4abd68
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'Location Tags'
+weight: 0

@@ -1,0 +1,8 @@
+uuid: e8c2912a-52bd-4d3d-8e65-ed903de06603
+langcode: en
+status: true
+dependencies: {  }
+name: 'Job Type'
+vid: job_type
+description: 'Type of job'
+weight: 0

@@ -1,0 +1,11 @@
+uuid: 0f6c30cb-e75a-4ec4-97e7-ffd05489c1d8
+langcode: en
+status: true
+dependencies: {  }
+id: client
+label: Client
+weight: 4
+is_admin: null
+permissions:
+  - 'flag apply_all'
+  - 'unflag apply_all'

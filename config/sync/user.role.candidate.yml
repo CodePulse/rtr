@@ -1,0 +1,11 @@
+uuid: d440dbe7-62bb-4739-9029-2d117a59d393
+langcode: en
+status: true
+dependencies: {  }
+id: candidate
+label: Candidate
+weight: 3
+is_admin: null
+permissions:
+  - 'flag apply_all'
+  - 'unflag apply_all'
