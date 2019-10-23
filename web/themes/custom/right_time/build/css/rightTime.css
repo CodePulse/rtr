@@ -22375,7 +22375,7 @@ ul.list-line li span {
 .team-member .team-details {
   opacity: 0;
   position: absolute;
-  height: 50%;
+  height: 83%;
   background: rgba(0, 0, 0, 0.85);
   padding-top: 10%;
   padding-left: 15px;
@@ -24929,7 +24929,7 @@ Primary style
   }
 }
 .cd-headline {
-  margin-bottom: 200px;
+  margin-bottom: 70px;
 }
 
 .cd-words-wrapper {
@@ -26190,4 +26190,36 @@ h1:not(.cd-headline), h2, h3 {
   .parallax-fix {
     background-size: auto 22% !important;
   }
+
+  .search-form {
+    width: 100%;
+  }
+  .search-form .search-input {
+    border-bottom: 2px solid #fff !important;
+    color: #fff !important;
+    background: #151212b3;
+    padding: 20px 20px;
+  }
+  .search-form .search-button {
+    color: #fff !important;
+  }
+  .search-form .search-button:hover {
+    color: #0c97ed !important;
+  }
+}
+.search-form-result {
+  margin-bottom: 100px;
+}
+
+.search-form .search-input {
+  border-bottom: 2px solid #fff !important;
+  color: #fff !important;
+  background: #151212b3;
+  padding: 20px 20px;
+}
+.search-form .search-button {
+  color: #fff !important;
+}
+.search-form .search-button:hover {
+  color: #0c97ed !important;
 }

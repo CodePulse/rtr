@@ -1,0 +1,6 @@
+{% for item in items %}
+  {% set duration = loop.index + 3 %}
+  <div class="col-md-6 col-sm-6 col-xs-12 text-block text-center" data-wow-duration="{{ duration }}00ms">
+    {{ item.content }}
+  </div>
+{% endfor %}

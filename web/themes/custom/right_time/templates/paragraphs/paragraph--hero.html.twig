@@ -6,12 +6,18 @@
       <div class="slider-typography">
         <div class="slider-text-middle-main">
           <div class="slider-text-bottom slider-text-middle3">
-            <h1 class="cd-headline letters type xs-margin-bottom-thirtyfive">
+            <h1 class="cd-headline letters type xs-margin-bottom-ten">
               <span class="rotation-highlight">{{ content.field_heading }}</span><br>
               <span class="cd-words-wrapper waiting">
                                         <b class="is-visible">{{ sub_text }}</b>
                                     </span>
             </h1>
+            <form id="search-header" method="post" action="/jobboard" name="search-header" class="search-form-result">
+              <div class="search-form position-relative">
+                <button type="submit" class="fa fa-search close-search search-button"></button>
+                <input type="text" name="search" class="search-input" placeholder="Search for a job" autocomplete="off">
+              </div>
+            </form>
           </div>
         </div>
       </div>

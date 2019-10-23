@@ -11,4 +11,38 @@
   .parallax-fix {
     background-size: auto 22% !important;
   }
+  .search-form  {
+    width: 100%;
+    .search-input {
+      border-bottom: 2px solid #fff !important;
+      color: #fff !important;
+      background: #151212b3;
+      padding: 20px 20px;
+    }
+    .search-button {
+      color: #fff !important;
+      &:hover {
+        color: #0c97ed !important;
+      }
+    }
+  }
+
+}
+
+.search-form-result {
+  margin-bottom: 100px;
+}
+.search-form  {
+  .search-input {
+    border-bottom: 2px solid #fff !important;
+    color: #fff !important;
+    background: #151212b3;
+    padding: 20px 20px;
+  }
+  .search-button {
+    color: #fff !important;
+    &:hover {
+      color: #0c97ed !important;
+    }
+  }
 }
