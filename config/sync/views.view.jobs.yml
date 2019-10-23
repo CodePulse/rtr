@@ -270,7 +270,7 @@ display:
             description: ''
             use_operator: false
             operator: keys_op
-            identifier: keys
+            identifier: search
             required: false
             remember: false
             multiple: false
@@ -278,7 +278,9 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
+              candidate: '0'
               content_administrator: '0'
+              client: '0'
           is_grouped: false
           group_info:
             label: ''

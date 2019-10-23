@@ -1,0 +1,22 @@
+uuid: 1625fa6f-9b30-4c98-9e01-1639fc9a5e45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_jobs.field_featured_jobs
+    - paragraphs.paragraphs_type.featured_jobs
+id: paragraph.featured_jobs.default
+targetEntityType: paragraph
+bundle: featured_jobs
+mode: default
+content:
+  field_featured_jobs:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

@@ -1,0 +1,24 @@
+uuid: c577c0d5-cfca-481e-a357-573199a04143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.featured_jobs.field_featured_jobs
+    - paragraphs.paragraphs_type.featured_jobs
+id: paragraph.featured_jobs.default
+targetEntityType: paragraph
+bundle: featured_jobs
+mode: default
+content:
+  field_featured_jobs:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+uuid: 71531b31-6ed0-49f2-b045-7ed3b65d6426
+langcode: en
+status: true
+dependencies: {  }
+id: featured_jobs
+label: 'Featured jobs'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }
