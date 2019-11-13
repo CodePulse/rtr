@@ -218,6 +218,11 @@ function right_time_preprocess_node(&$variables) {
       //salary
       if (!$node->get('field_salary')->isEmpty()) {
         $salary = $node->get('field_salary')->first()->getString();
+        $job_meta = 'Up to £' . number_format($salary) .' per year';
+      }
+      else {
+        $job_meta = ' ';
+
       }
       if (!$node->get('field_location')->isEmpty()) {
         $address = $node->get('field_location')->first()->getValue();
@@ -227,7 +232,6 @@ function right_time_preprocess_node(&$variables) {
         $contract_type_term_label = $contract_type_term->label();
       }
 
-      $job_meta = 'Up to £' . number_format($salary) .' per year';
       $variables['job_meta'] = $job_meta;
 
 
