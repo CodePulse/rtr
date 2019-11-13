@@ -220,9 +220,8 @@ function right_time_preprocess_node(&$variables) {
         $salary = $node->get('field_salary')->first()->getString();
         $job_meta = 'Up to £' . number_format($salary) .' per year';
       }
-      else {
+      if ($node->get('field_salary')->isEmpty() || $node->get('field_salary')->getString() == '0') {
         $job_meta = ' ';
-
       }
       if (!$node->get('field_location')->isEmpty()) {
         $address = $node->get('field_location')->first()->getValue();

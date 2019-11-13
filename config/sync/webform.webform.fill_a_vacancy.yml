@@ -12,7 +12,7 @@ id: fill_a_vacancy
 title: 'Fill a vacancy'
 description: ''
 category: ''
-elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncompany_name:\n  '#type': textfield\n  '#title': 'Company name'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\njob_description:\n  '#type': webform_document_file\n  '#title': 'Job description'\n  '#required': true\n  '#uri_scheme': public\n  '#file_extensions': 'rtf pdf doc docx odt ppt pptx'\ncaptcha:\n  '#type': captcha"
+elements: "full_name:\n  '#type': textfield\n  '#title': 'Full name'\n  '#required': true\ncompany_name:\n  '#type': textfield\n  '#title': 'Company name'\n  '#required': true\nemail_address:\n  '#type': email\n  '#title': 'Email Address'\n  '#required': true\ncontact_number:\n  '#type': tel\n  '#title': 'Contact number'\njob_description:\n  '#type': webform_document_file\n  '#title': 'Job description'\n  '#uri_scheme': public\n  '#file_extensions': 'rtf pdf doc docx odt ppt pptx'\ncaptcha:\n  '#type': captcha"
 css: ''
 javascript: ''
 settings:

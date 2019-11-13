@@ -11,7 +11,7 @@ entity_type: node
 bundle: job
 label: Salary
 description: 'Ideally, add the maximum salary.'
-required: true
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
